@@ -4,7 +4,7 @@
 
 <h1>SymbiFlow</h1>
 <p>SymbiFlow will be a FOSS Verilog-to-Bitstream FPGA synthesis flow for Xilinx
-7-Series FPGAs and iCE40. It is under construction. This page describes briefly
+7-Series, Lattice iCE40 and Lattice ECP5 FPGAs. It is under construction. This page describes briefly
 what we are up to.</p>
 
 <h3>Project X-Ray</h3>
@@ -47,6 +47,19 @@ features in the test designs.</p>
 
 <p>Project X-Ray also includes command line tools for reading / writing Xilinx bit-stream files and converting them to / from simpler-to-process text-based formats.</p>
 
+<h3>Project Trellis</h3>
+<p>Project Trellis aims at documenting the Lattice ECP5 bit-stream, so that Open Source
+tools can be built. Project Trellis currently contains enough bitstream documentation to
+generate simple test bitstreams - including complete documentation for logic and interconnect tiles, and
+partial documentation for IO and EBR tiles. Work is ongoing to document more advanced parts of the ECP5 such as PLLs and DSPs.</p>
+<p>The vast majority of Project Trellis applies to all ECP5 parts and may also apply to related Lattice parts such as the CrossLink FPGAs. Currently the complete global network routing is documented only for the 45k device, but we hope to add this for the other ECP5 parts soon.</p>
+<p>The documentation is available in two formats:
+<ul>
+<li><a href="https://symbiflow.github.io/prjtrellis-db/">Human-readable HTML files</a></li>
+<li><a href="https://github.com/SymbiFlow/prjtrellis-db/">Machine-readable ASCII files</a></li>
+</ul>
+</p>
+<p>More documentation can be found published on the <a href="http://prjtrellis.readthedocs.io/en/latest/">prjtrellis ReadTheDocs site</a>.</p>
 <h3>Project IceStorm</h3>
 <p><a href="http://www.clifford.at/icestorm/">Project IceStorm</a> is a previous
 project that documented the iCE40 bit-stream format. It will become a part
