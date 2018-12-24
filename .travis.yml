@@ -15,23 +15,12 @@ before_script:
   - git config --global user.name $GIT_NAME
   - git config --global user.email $GIT_EMAIL
   - git config --global push.default simple
-  - git remote add origin-pages https://${GH_TOKEN}@github.com/$TRAVIS_REPO_SLUG.git > /dev/null 2>&1
   - git fetch origin --tags
-  - git fetch --all
-  - git worktree add build origin/gh-pages -b gh-pages
-#  - git clone git+ssh://github.com/SymbiFlow/symbiflow.github.io --branch gh-pages build
+  - ./.travis-deploy-clone.sh
 
 script:
   - gulp build
 
 after_success:
-  - cd build
-  - touch .nojekyll
-  - git add --all .
-  - git status
-  - echo "Updating to $(git describe --tags)." > /tmp/git_commit
-  - echo >> /tmp/git_commit
-  - echo "$TRAVIS_COMMIT_MESSAGE" >> /tmp/git_commit
-  - git commit -F /tmp/git_commit
-  - git log
-  - git push origin-pages gh-pages
+  - ./.travis-deploy-push.sh
+
