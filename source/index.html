@@ -196,11 +196,11 @@
                 </td>
                 <td>
 		  <!-- trellis -->
-                  <img class="icon icon--large icon--mb" src="assets/img/partial.svg" alt="">
+                  <img class="icon icon--large icon--mb" src="assets/img/tick.svg" alt="">
                   <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                  <img class="icon icon--small" src="assets/img/cross.svg" alt="">
-                  <img class="icon icon--small" src="assets/img/cross.svg" alt="">
-                  <img class="icon icon--small" src="assets/img/partial.svg" alt="">
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="">
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="">
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="">
                 </td>
                 <td>
 		  <!-- 2064 -->
@@ -357,16 +357,17 @@
           Project Trellis
         </h3>
         <p class="paragraph project__paragraph">
-          Project Trellis aims at documenting the Lattice ECP5 bit-stream, so that Open Source tools can be built.
-          Project Trellis currently contains enough bitstream documentation to generate simple test bitstreams -
-          including complete documentation for logic and interconnect tiles, and partial documentation for IO and EBR
-          tiles. Work is ongoing to document more advanced parts of the ECP5 such as PLLs and DSPs.
+          Project Trellis aims at documenting the Lattice ECP5 bit-stream, so that Open Source tools can be built. Project
+          Trellis is used to build the ECP5 device database for nextpnr and generate bitstreams for designs placed
+          and routed with nextpnr.
+          Project Trellis contains bitstream documentation for almost all functionality of the ECP5 - including logic, BRAM,
+          multipliers, IO, PLLs, and SERDES. Project Trellis also includes timing data for logic, BRAM and basic interconnect.
         </p>
         <div class="additional additional--left">
           <p class="paragraph project__paragraph">
             The vast majority of Project Trellis applies to all ECP5 parts and may also apply to related Lattice parts
-            such as the CrossLink FPGAs. Currently the complete global network routing is documented only for the 45k
-            device, but we hope to add this for the other ECP5 parts soon.
+            such as the CrossLink FPGAs. IO and global network data is included for all ECP5 parts, and timing data is included
+            for all speed grades.
         </div>
         <div class="additional additional--right">
           <p class="paragraph project__paragraph">
@@ -499,6 +500,27 @@
               <img class="board__img" src="assets/img/netv2.png" alt="Board">
               <span class="board__name">Alphamax NeTV2</span>
               <span class="board__fpga">XC7A35T</span>
+            </li>
+          </a>
+          <a href="https://www.latticesemi.com/en/Products/DevelopmentBoardsAndKits/ECP55GVersaDevKit" target="_blank" class="board__anchor">
+            <li class="glide__slide board">
+              <img class="board__img" src="assets/img/versa5g.png" alt="Board">
+              <span class="board__name">ECP5-5G Versa</span>
+              <span class="board__fpga">LFE5UM5G-45F</span>
+            </li>
+          </a>
+          <a href="http://radiona.org/new-fpga-board-ulx3s/" target="_blank" class="board__anchor">
+            <li class="glide__slide board">
+              <img class="board__img" src="assets/img/ulx3s.jpg" alt="Board">
+              <span class="board__name">ULX3S</span>
+              <span class="board__fpga">LFE5U-12F/-25F/-45F/-85F</span>
+            </li>
+          </a>
+          <a href="https://www.crowdsupply.com/tinyfpga/tinyfpga-ex" target="_blank" class="board__anchor">
+            <li class="glide__slide board">
+              <img class="board__img" src="assets/img/tinyfpga_ex.jpg" alt="Board">
+              <span class="board__name">TinyFPGA Ex</span>
+              <span class="board__fpga">LFE5U-85F/LFE5UM5G-85F</span>
             </li>
           </a>
         </ul>
