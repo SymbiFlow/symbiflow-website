@@ -46,9 +46,6 @@ h1 {
   line-height: em(25px);
   font-size: em(50px);
   color: $text-secondary;
-  max-width: 890px;
-  width: calc(100% - 80px);
-  margin: 0 auto;
 }
 
 h2 {
@@ -56,16 +53,22 @@ h2 {
   margin: 0;
 }
 
+h3 {
+  color: $header-secondary;
+  margin: 0 0 60px;
+  text-align: left;
+  font-size: em(36px);
+}
+
 h4 {
   font-size: em(22px);
 }
-
 
 a {
   text-decoration: none;
   color: inherit;
   transition: .3s;
-  &.inline__link {
+  &.inline-link {
     color: $header-primary;
     font-style: italic;
   }
@@ -76,13 +79,61 @@ a {
 
 .row {
   position: relative;
-  overflow-x: hidden;
-  overflow-y: visible;
+  overflow: visible;
+  width: calc(100% - 80px);
+  max-width: 1180px;
+  margin: 0 auto;
 }
 
 .row__header {
-  width: calc(100% - 80px);
+  width: 100%;
   margin: 0 auto;
+}
+
+.btn {
+  text-align: center;
+  min-width: 180px;
+  border: 2px solid $text-tertiary;
+  padding: 20px;
+  color: $text-tertiary;
+  font-weight: bold;
+  font-family: $font-secondary;
+  transition: .3s;
+  overflow: hidden;
+  position: relative;
+  &::before {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 110%;
+    height: 230%;
+    background: $text-tertiary;
+    top: 0;
+    left: 0;
+    transform: translate(100%, -28%) rotate(20deg);
+    transition: .3s;
+    z-index: -1;
+  }
+  &:hover {
+    opacity: 1;
+    color: $bg-secondary;
+    &::before {
+      transform:  translate(-4%, -28%) rotate(20deg);
+    }
+  }
+  &--inverted {
+    color: $bg-secondary;
+    border-color: $bg-secondary;
+    &::before {
+      background: $bg-secondary;
+    }
+    &:hover {
+      color: $text-tertiary;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    width: 200px;
+  }
 }
 
 // ***********************
@@ -200,22 +251,31 @@ a {
 
 .row__hero {
   padding: 280px 0 114px;
+  @media screen and (max-width: 500px) {
+    padding-top: 200px;
+  }
 }
 
-.subheader__hero {
+.hero__header {
+  max-width: 890px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero__subheader {
   font-family: $font-primary;
   font-weight: normal;
   color: $text-secondary;
   max-width: 730px;
   line-height: 30px;
   margin: 40px auto 0;
-  width: calc(100% - 80px);
+  width: 100%;
   &:nth-of-type(2) {
     margin-top: 20px;
   }
 }
 
-.btn {
+.hero__btn {
   cursor: pointer;
   width: 230px;
   padding: 20px 0;
@@ -245,37 +305,15 @@ a {
 
 .row__about {
   padding: 200px 0;
-  overflow: hidden;
-  &::before {
-    z-index: 0;
-    display: block;
-    position: absolute;
-    content: '';
-    width: 200vw;
-    height: calc(100% - 150px);
-    background-color: $bg-secondary;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(4deg);
-  }
-  &::after {
-    z-index: -1;
-    display: block;
-    position: absolute;
-    content: '';
-    width: 200vw;
-    height: calc(100% - 150px);
-    background-color: $bg-tertiary;
-    top: 51%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-4deg);
-    @media screen and (max-width: 500px) {
+  @include tilted-bg;
+  @media screen and (max-width: 500px) {
+    &::after {
       top: 50%;
     }
   }
 }
 
-.header__about {
+.about__header {
   position: relative;
   z-index: 1;
   color: $text-tertiary;
@@ -283,8 +321,6 @@ a {
 
 .about {
   position: relative;
-  width: calc(100% - 80px);
-  max-width: 1180px;
   column-count: 2;
   column-gap: 40px;
   margin: 62px auto 0;
@@ -295,7 +331,7 @@ a {
   }
 }
 
-.paragraph__about {
+.about__paragraph {
   margin: 0 0 20px;
   line-height: 30px;
 }
@@ -312,14 +348,23 @@ a {
   }
 }
 
-.header__diagrams {
+.diagrams__header {
   margin-bottom: 80px;
 }
 
 .diagram {
   margin: 0 auto 160px;
+  @media screen and (max-width: 500px) {
+    margin-bottom: 80px;
+  }
   &:last-of-type {
     margin-bottom: 0;
+  }
+  &:first-of-type {
+    margin-top: 160px;
+    @media screen and (max-width: 500px) {
+      margin-top: 80px;
+    }
   }
 }
 
@@ -339,7 +384,7 @@ a {
 .table__container {
   border: 3px solid $header-secondary;
   border-radius: 8px;
-  overflow: hidden;
+  overflow: auto;
   margin: 0 auto;
 }
 
@@ -347,55 +392,53 @@ a {
   table-layout: fixed;
   font-size: em(30px);
   border-collapse: collapse;
-  td {
-    width: 245px;
-    border: 3px solid $header-secondary;
-    padding: 20px;
-    &:nth-of-type(4n) {
-      border-right: 0;
-    }
-    &:nth-of-type(5n + 1) {
-      border-left: 0;
-      font-weight: bold;
-      ul {
-        font-weight: normal;
-        list-style-type: none;
-        padding-left: 0;
-        margin: 10px 0;
-        li {
-          font-size: em(26px, 30px);
-          &:not(:last-of-type) {
-            margin-bottom: 8px;
-          }
-          &:before {
-            display: inline;
-            content: '- ';
-          }
-        }
-      }
-    }
+  tr:last-of-type td {
+    border-bottom: 0;
   }
-  thead tr td {
+  thead td {
     border-top: 0;
     padding: 30px 45px;
     text-align: center;
     font-weight: bold;
   }
-  tbody tr:last-of-type td {
-    border-bottom: 0;
+  td {
+    width: 245px;
+    border: 3px solid $header-secondary;
+    padding: 20px;
+    &:last-child {
+      border-right: 0;
+    }
+    &:first-child {
+      border-left: 0;
+      font-weight: bold;
+    }
   }
-  .icon {
-    display: block;
-    margin: 10px auto 23px;
+  ul {
+    font-weight: normal;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 10px 0;
+    li {
+      font-size: em(26px, 30px);
+      &:not(:last-of-type) {
+        margin-bottom: 8px;
+      }
+      &::before {
+        display: inline;
+        content: '- ';
+      }
+    }
   }
-  .icon--small {
-    height: 20px;
-  }
-  .icon--large {
+}
+
+.icon {
+  display: block;
+  margin: 10px auto 23px;
+  &--large {
     height: 30px;
   }
-  .icon--mb {
-    margin: 20px auto 40px;
+  &--small {
+    height: 20px;
   }
 }
 
@@ -403,20 +446,18 @@ a {
 // SUBPROJECTS
 // ***********************
 
-.aims {
+.subprojects__tiles {
   position: relative;
   z-index: 1;
   display: flex;
   justify-content: space-between;
-  max-width: 1180px;
-  width: calc(100% - 80px);
-  margin: 70px auto 0;
+  margin-top: 70px;
   @media screen and (max-width: 800px) {
     flex-direction: column;
   }
 }
 
-.aim {
+.subproject__tile {
   width: calc(100% / 3 - 15px);
   border-radius: 10px;
   box-shadow: 0 2px 20px 0 rgba(0,0,0,0.21);
@@ -441,7 +482,7 @@ a {
   }
 }
 
-.aim__icon {
+.subproject__icon {
   height: 160px;
   @media screen and (max-width: 800px) {
     width: 100%;
@@ -449,13 +490,13 @@ a {
   }
 }
 
-.aim__details {
+.subproject__details {
   @media screen and (max-width: 800px) {
     width: 130%;
   }
 }
 
-.aim__header {
+.subproject__header {
   margin-top: 0;
   margin-bottom: 60px;
   @media screen and (max-width: 800px) {
@@ -466,72 +507,38 @@ a {
   }
 }
 
-.aim__description {
+.subproject__description {
   line-height: 30px;
   @media screen and (max-width: 800px) {
     margin-bottom: 0;
   }
 }
 
-.aim__more {
-  display: block;
-  text-align: right;
-  color: $header-primary;
+.subproject__more {
+  float: right;
   font-weight: bold;
   margin-top: 20px;
 }
 
 .row__subprojects {
   padding: 150px 0 160px;
-  margin: 0 auto;
-  overflow: visible;
-  &::before {
-    z-index: 0;
-    display: block;
-    position: absolute;
-    content: '';
-    width: 200vw;
-    height: calc(100% - 320px);
-    background-color: $bg-secondary;
-    top: 38%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(4deg);
-  }
-  &::after {
-    z-index: -1;
-    display: block;
-    position: absolute;
-    content: '';
-    width: 200vw;
-    height: calc((100% - 320px) / 2);
-    background-color: $bg-tertiary;
-    top: 39%;
-    left: 50%;
-    transform: translate(-50%, -100%) rotate(-5deg);
+  @include tilted-bg(320px);
+  @media screen and (max-width: 800px) {
+    &::before,
+    &::after {
+      top: 44%;
+    }
   }
 }
 
-.header__subprojects {
+.subprojects__header {
   position: relative;
   color: $text-tertiary;
   margin: 0 auto 52px;
 }
 
-h3 {
-  color: $header-secondary;
-  margin: 0 0 60px;
-  text-align: left;
-  font-size: em(36px);
-}
-
 .row__projects {
   padding-bottom: 80px;
-}
-
-.projects {
-  width: calc(100% - 80px);
-  max-width: 1180px;
-  margin: 0 auto;
 }
 
 .project {
@@ -551,24 +558,22 @@ h3 {
   line-height: 30px;
 }
 
-.additional {
+.project__additional {
   width: calc(50% - 17px);
   @media screen and (max-width: 600px) {
     width: 100%;
   }
-}
-
-.additional--left {
-  float: left;
-  @media screen and (max-width: 600px) {
-    float: none;
+  &--left {
+    float: left;
+    @media screen and (max-width: 600px) {
+      float: none;
+    }
   }
-}
-
-.additional--right {
-  float: right;
-  @media screen and (max-width: 600px) {
-    float: none;
+  &--right {
+    float: right;
+    @media screen and (max-width: 600px) {
+      float: none;
+    }
   }
 }
 
@@ -578,47 +583,30 @@ h3 {
 
 .row__downloads {
   padding: 180px 0;
-  overflow: visible;
+  @include tilted-bg(120px);
   &::before {
-    z-index: 0;
-    display: block;
-    position: absolute;
-    content: '';
-    width: 200vw;
-    height: calc(100% - 120px);
-    background-color: $bg-secondary;
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%) rotate(-4deg);
   }
   &::after {
-    z-index: -1;
-    display: block;
-    position: absolute;
-    content: '';
-    width: 200vw;
     height: calc((100% - 120px) / 2);
-    background-color: $bg-tertiary;
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -100%) rotate(5deg);
-    @media screen and (max-width: 500px) {
-      top: 48%;
+  }
+  @media screen and (max-width: 500px) {
+    &::after {
+      top: 50%;
     }
   }
 }
 
-.header__downloads {
+.downloads__header {
   color: $text-tertiary;
   position: relative;
   z-index: 1;
 }
 
-.paragraph__downloads {
+.downloads__paragraph {
   position: relative;
   z-index: 1;
-  max-width: 1180px;
-  width: calc(100% - 80px);
   margin: 40px auto 60px;
   color: $text-tertiary;
   font-size: em(24px);
@@ -652,54 +640,25 @@ h3 {
   }
 }
 
-.download__link {
-  border: 2px solid $text-tertiary;
-  padding: 20px;
-  color: $text-tertiary;
-  font-weight: bold;
-  font-family: $font-secondary;
-  transition: .3s;
-  overflow: hidden;
-  position: relative;
-  &::before {
-    display: block;
-    content: '';
-    position: absolute;
-    width: 110%;
-    height: 230%;
-    background: $text-tertiary;
-    top: 0;
-    left: 0;
-    transform: translate(100%, -28%) rotate(20deg);
-    transition: .3s;
-    z-index: -1;
-  }
-  &:hover {
-    opacity: 1;
-    color: $bg-secondary;
-    &::before {
-      transform:  translate(-4%, -28%) rotate(20deg);
-    }
-  }
-  @media screen and (max-width: 500px) {
-    width: 200px;
-    text-align: center;
-  }
-}
+// ***********************
+// TALKS & HELP
+// ***********************
 
-// ***********************
-// HELP
-// ***********************
+.row__help,
+.row__talks {
+  padding: 90px 0 0;
+  max-width: 800px;
+}
 
 .row__help {
-  padding: 0;
-  padding-top: 90px;
-  width: calc(100% - 80px);
-  max-width: 800px;
-  margin: 0 auto;
+  padding-bottom: 100px;
 }
 
-.header__help {
+.talks__header {
+  margin-bottom: 40px;
+}
+
+.help__header {
   margin-bottom: 80px;
 }
 
@@ -709,29 +668,18 @@ h3 {
 }
 
 .talks__list {
-  margin-left: 20%;
-  margin-right: 20%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-.help__list li, .talks__list li {
-  margin-bottom: 8px;
-}
-
-#help .download__link {
-  background: $bg-primary;
-  width: 200px;
-  text-align: center;
-  color: $bg-secondary;
-  border: 2px solid $bg-secondary;
+.help__list,
+.talks__list {
+  li {
+    margin-bottom: 8px;
+  }
   @media screen and (max-width: 500px) {
-    width: 160px;
-  }
-  &:hover, &:active {
-    transform: none;
-    box-shadow: none;
-    background: $bg-secondary;
-    color: $text-tertiary;
-  }
+    padding-left: 25px;
+  }  
 }
 
 // ***********************
@@ -740,13 +688,10 @@ h3 {
 
 .row__boards {
   padding: 90px 0 130px;
-  margin: 0 auto;
 }
 
 .boards__container {
   position: relative;
-  max-width: 1180px;
-  width: calc(100% - 160px);
   margin: 60px auto 0;
 }
 
@@ -821,14 +766,12 @@ h3 {
   &:hover {
     color: transparentize($header-primary, .3);
   }
-}
-
-.boards__scroll--left {
-  left: -35px;
-}
-
-.boards__scroll--right {
-  right: -35px;
+  &--left {
+    left: -35px;
+  }
+  &--right {
+    right: -35px;
+  }
 }
 
 // ***********************
@@ -854,11 +797,11 @@ h3 {
 
 .footer__social {
   display: flex;
+}
 
-  img {
-    display: block;
-    width: 30px;
-    height: 30px;
-    margin-left: 30px;
-  }
+.social__icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-left: 30px;
 }

@@ -2,20 +2,10 @@
 let scroll = new SmoothScroll('a[href*="#"]', {
   speed: 300,
   offset: (anchor, toggle) => {
-    if (anchor.classList.contains('row__subprojects')) {
-      return 100
-    } else if (anchor.classList.contains('project')) {
+    if (anchor.classList.contains('diagram') || anchor.classList.contains('project')) {
       return 200
-    } else if (anchor.classList.contains('row__boards')) {
-      return 100
-    } else if (anchor.classList.contains('row__downloads')) {
-      return 150
-    } else if (anchor.classList.contains('row__about')) {
-      return 100
-    } else if (anchor.classList.contains('row__help')) {
-      return 100
     } else {
-      return 0
+      return 100
     }
   }
 })
