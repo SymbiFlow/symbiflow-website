@@ -34,62 +34,56 @@
   </nav>
 
   <section class="row row__hero" id="hero">
-    <h1 class="header header__hero">
+    <h1 class="header hero__header">
       Symbi&shy;Flow - open source FPGA tooling for rapid innov&shy;ation
     </h1>
-    <h4 class="subheader subheader__hero">
+    <h4 class="subheader hero__subheader">
       SymbiFlow is a work-in-progress FOSS Verilog-to-Bitstream (end-to-end) FPGA synthesis flow, currently targeting Xilinx 7-Series, Lattice iCE40 and Lattice ECP5 FPGAs. Think of it as the <strong>GCC of FPGAs</strong>.
     </h4>
     <a href="#downloads">
-      <div class="btn btn__hero">
+      <div class="hero__btn">
         Get Started
       </div>
     </a>
   </section>
 
   <section class="row row__about" id="about">
-    <h2 class="header header__about row__header">
+    <h2 class="header row__header about__header">
       Project aims
     </h2>
     <div class="about">
-      <p class="paragraph paragraph__about">
+      <p class="about__paragraph">
         SymbiFlow aims at building FPGA tooling that is:
         <ul class="about__aims">
-          <li class="about__aim">
-            Fully Open Source
-          </li>
-          <li class="about__aim">
-            Multi Platform
-          </li>
-          <li class="about__aim">
-            Pluggable / Interchangeable
-          </li>
+          <li>Fully Open Source</li>
+          <li>Multi Platform</li>
+          <li>Pluggable / Interchangeable</li>
         </ul>
       </p>
-      <p class="paragraph paragraph__about">
+      <p class="about__paragraph">
         Symbiflow is meant to enable new innovation, as well as optimisation and automation of FPGA development workflows, to help make FPGA more accessible to a broad community of software developers who might otherwise be discouraged by the closed and vendor-specific workflows of today.
       </p>
     </div>
   </section>
 
-  <section class="row row__diagrams projects">
-    <h2 class="header header__diagrams row__header">
+  <section class="row row__diagrams">
+    <h2 class="header row__header diagrams__header">
       How it works
     </h2>
-    <p class="paragraph project__paragraph">
+    <p class="project__paragraph">
       To understand how SymbiFlow works, it is best to start with an overview of the general <a href="#eda-ecosystem">EDA tooling ecosystem</a> and then proceed to see <a href="#structure">what parts constitute the SymbiFlow project</a>.
     </p>
     <div class="diagram" id="eda-ecosystem">
       <h3 class="header diagram__header">
         EDA Tooling Ecosystem
       </h3>
-      <p class="paragraph project__paragraph">
+      <p class="project__paragraph">
         For both ASIC- and FPGA-oriented EDA tooling, there are three major areas that the workflow needs to cover: hardware description, frontend and backend.
       </p>
-      <p class="paragraph project__paragraph">
+      <p class="project__paragraph">
         Hardware description languages are generally open, with both established HDLs such as Verilog and VHDL and emerging software-inspired paradigms like Chisel, SpinalHDL or MiGen. The major problem lies however in the front- and backend, where previously there was no established standard, vendor-neutral tooling that would cover all the necessary components for an end-to-end flow.
       </p>
-      <p class="paragraph project__paragraph">
+      <p class="project__paragraph">
         This pertains both to ASIC and FPGA workflows, although SymbiFlow focuses on the latter (some parts of SymbiFlow will also be useful in the former).
       </p>
       <div class="diagram__diagram">
@@ -100,10 +94,10 @@
       <h3 class="header diagram__header">
         SymbiFlow project structure
       </h3>
-      <p class="paragraph project__paragraph">
+      <p class="project__paragraph">
         To achieve SymbiFlow's goal of a complete FOSS FPGA toolchain, a number of tools and projects are necessary to provide all the needed components of an end-to-end flow. Thus, SymbiFlow serves as an umbrella project for several activities, the central of which pertains to the creation of so-called FPGA "architecture definitions", i.e. documentation of how specific FPGAs work internally.
       </p>
-      <p class="paragraph project__paragraph">
+      <p class="project__paragraph">
         Those definitions and serve as input to backend tools like nextpnr and Verilog to Routing, and frontend tools like Yosys. They are created within separate collaborating projects targeting different FPGAs - <a href="#xray">Project X-Ray</a> for Xilinx 7-Series, <a href="#icestorm">Project IceStorm</a> for Lattice iCE40 and <a href="#trellis">Project Trellis</a> for Lattice ECP5 FPGAs.
       </p>
       <div class="diagram__diagram">
@@ -120,18 +114,10 @@
             <thead>
               <tr>
                 <td></td>
-                <td>
-                  Project IceStorm
-                </td>
-                <td>
-                  Project X&#8209;Ray
-                </td>
-                <td>
-                  Project Trellis
-                </td>
-                <td>
-                  Project 2064
-                </td>
+                <td>Project IceStorm</td>
+                <td>Project X&#8209;Ray</td>
+                <td>Project Trellis</td>
+                <td>Project 2064</td>
               </tr>
             </thead>
             <tbody>
@@ -180,7 +166,7 @@
                 </td>
                 <td>
 		  <!-- icestorm -->
-                  <img class="icon icon--large icon--mb" src="assets/img/tick.svg" alt="">
+                  <img class="icon icon--large" src="assets/img/tick.svg" alt="">
                   <img class="icon icon--small" src="assets/img/tick.svg" alt="">
                   <img class="icon icon--small" src="assets/img/tick.svg" alt="">
                   <img class="icon icon--small" src="assets/img/tick.svg" alt="">
@@ -188,7 +174,7 @@
                 </td>
                 <td>
 		  <!-- x-ray -->
-                  <img class="icon icon--large icon--mb" src="assets/img/partial.svg" alt="">
+                  <img class="icon icon--large" src="assets/img/partial.svg" alt="">
                   <img class="icon icon--small" src="assets/img/cross.svg" alt="">
                   <img class="icon icon--small" src="assets/img/cross.svg" alt="">
                   <img class="icon icon--small" src="assets/img/cross.svg" alt="">
@@ -196,7 +182,7 @@
                 </td>
                 <td>
 		  <!-- trellis -->
-                  <img class="icon icon--large icon--mb" src="assets/img/tick.svg" alt="">
+                  <img class="icon icon--large" src="assets/img/tick.svg" alt="">
                   <img class="icon icon--small" src="assets/img/tick.svg" alt="">
                   <img class="icon icon--small" src="assets/img/tick.svg" alt="">
                   <img class="icon icon--small" src="assets/img/tick.svg" alt="">
@@ -204,7 +190,7 @@
                 </td>
                 <td>
 		  <!-- 2064 -->
-                  <img class="icon icon--large icon--mb" src="assets/img/na.svg" alt="">
+                  <img class="icon icon--large" src="assets/img/na.svg" alt="">
                   <img class="icon icon--small" src="assets/img/na.svg" alt="">
                   <img class="icon icon--small" src="assets/img/na.svg" alt="">
                   <img class="icon icon--small" src="assets/img/na.svg" alt="">
@@ -252,101 +238,100 @@
   </section>
 
   <section class="row row__subprojects" id="subprojects">
-    <h2 class="header header__subprojects row__header">
+    <h2 class="header row__header subprojects__header">
       Subprojects
     </h2>
-    <div class="aims">
-      <div class="aim">
-        <div class="aim__details">
-          <h4 class="aim__header">
+    <div class="subprojects__tiles">
+      <div class="subproject__tile">
+        <div class="subproject__details">
+          <h4 class="subproject__header">
             Project X-Ray
           </h4>
-          <p class="aim__description">
+          <p class="subproject__description">
             Project X-Ray aims at documenting the Xilinx 7-series bit-stream format, a prerequisite to building Open
             Source tools to generate bit-streams for those devices.
           </p>
-          <a class="aim__more" href="#xray">learn more</a>
+          <a class="subproject__more inline-link" href="#xray">learn more</a>
         </div>
       </div>
-      <div class="aim">
-        <div class="aim__details">
-          <h4 class="aim__header">
+      <div class="subproject__tile">
+        <div class="subproject__details">
+          <h4 class="subproject__header">
             Project Trellis
           </h4>
-          <p class="aim__description">
+          <p class="subproject__description">
             Project Trellis aims at documenting the Lattice ECP5 bit-stream, so that Open Source tools can be built.
           </p>
-          <a class="aim__more" href="#trellis">learn more</a>
+          <a class="subproject__more inline-link" href="#trellis">learn more</a>
         </div>
       </div>
-      <div class="aim">
-        <div class="aim__details">
-          <h4 class="aim__header">
+      <div class="subproject__tile">
+        <div class="subproject__details">
+          <h4 class="subproject__header">
             Project IceStorm
           </h4>
-          <p class="aim__description">
+          <p class="subproject__description">
             Project IceStorm is a previous project that documented the iCE40 bit-stream format. It will become a part
             of SymbiFlow.
           </p>
-          <a class="aim__more" href="#icestorm">learn more</a>
+          <a class="subproject__more inline-link" href="#icestorm">learn more</a>
         </div>
       </div>
     </div>
   </section>
 
   <section class="row row__projects">
-    <div class="projects">
       <div class="project project__xray" id="xray">
         <h3 class="header header__project">
           Project X-Ray
         </h3>
-        <p class="paragraph project__paragraph">
+        <p class="project__paragraph">
           Project X-Ray aims at documenting the Xilinx 7-series bit-stream format, a prerequisite to building Open
           Source tools to generate bit-streams for those devices. The information currently on this page is a sneak
           preview for the kind of information Project X-Ray will provide.
         </p>
-        <p class="paragraph project__paragraph">
+        <p class="project__paragraph">
           Currently the work focuses on the Artix-7 xc7a50tfgg484-1 device. But we hope to be able to provide
           documentation for all Xilinx 7-Series, UltraScale, and UltraScale+ devices in the long term.
         </p>
-        <p class="paragraph project__paragraph">
+        <p class="project__paragraph">
           Right now we focus on the region SLICE_X12Y100:SLICE_X27Y149 on the xc7a50tfgg484-1 device (configuration
           frames 0x00020500:0x000208ff). The immediate goal of the project is to provide tools to create bit-streams
           for partial reconfiguration of this region only.
         </p>
-        <div class="additional additional--left">
-          <p class="paragraph project__paragraph">
+        <div class="project__additional project__additional--left">
+          <p class="project__paragraph">
             The documentation is available in two formats:<br>
-            <a class="inline__link" href="https://symbiflow.github.io/prjxray-db/artix7/" target="_blank">Human-readable
+            <a class="inline-link" href="https://symbiflow.github.io/prjxray-db/artix7/" target="_blank">Human-readable
               HTML files</a><br>
-            <a class="inline__link" href="https://github.com/SymbiFlow/prjxray-db/" target="_blank">Machine-readable
+            <a class="inline-link" href="https://github.com/SymbiFlow/prjxray-db/" target="_blank">Machine-readable
               ASCII files</a><br>
           </p>
-          <p class="paragraph project__paragraph">
+          <p class="project__paragraph">
             We will update the information on this page and provide more documentation on the format we use to document
             the bit-stream in the near future.
           </p>
-          <p class="paragraph project__paragraph">
-            Check out <a class="inline__link" href="https://github.com/SymbiFlow/" target="_blank">our github page</a>
+          <p class="project__paragraph">
+            Check out <a class="inline-link" href="https://github.com/SymbiFlow/" target="_blank">our github page</a>
             if you want to peek at our methodology. The
             short description is this: We run many small designs through Vivado and use the TCL API to constrain the
             designs so that they have certain properties, then read the generated bit-streams and run a simple
             statistical analysis to correlate the bit-stream bits with features in the test designs.
           </p>
         </div>
-        <div class="additional additional--right">
-          <p class="paragraph project__paragraph">
-            More documentation can be found published on <a class="inline__link" href="http://prjxray.readthedocs.io/en/latest/"
+        <div class="project__additional project__additional--right">
+          <p class="project__paragraph">
+            More documentation can be found published on <a class="inline-link" href="http://prjxray.readthedocs.io/en/latest/"
               target="_blank">prjxray ReadTheDocs site</a>
             - this includes:
           </p>
-          <p class="paragraph project__paragraph">
-            <a class="inline__link" href="http://prjxray.readthedocs.io/en/latest/architecture/overview.html" target="_blank">Highlevel
+          <p class="project__paragraph">
+            <a class="inline-link" href="http://prjxray.readthedocs.io/en/latest/architecture/overview.html" target="_blank">Highlevel
               Bitstream Architecture</a><br>
-            <a class="inline__link" href="http://prjxray.readthedocs.io/en/latest/db_dev_process/overview.html" target="_blank">Overview
+            <a class="inline-link" href="http://prjxray.readthedocs.io/en/latest/db_dev_process/overview.html" target="_blank">Overview
               of DB Development Process</a>
           </p>
-          <p class="paragraph project__paragraph">
+          <p class="project__paragraph">
             Project X-Ray also includes command line tools for reading / writing Xilinx bit-stream files and converting
             them to / from simpler-to-process text-based formats.
           </p>
@@ -356,31 +341,31 @@
         <h3 class="header header__project">
           Project Trellis
         </h3>
-        <p class="paragraph project__paragraph">
+        <p class="project__paragraph">
           Project Trellis aims at documenting the Lattice ECP5 bit-stream, so that Open Source tools can be built. Project
           Trellis is used to build the ECP5 device database for nextpnr and generate bitstreams for designs placed
           and routed with nextpnr.
           Project Trellis contains bitstream documentation for almost all functionality of the ECP5 - including logic, BRAM,
           multipliers, IO, PLLs, and SERDES. Project Trellis also includes timing data for logic, BRAM and basic interconnect.
         </p>
-        <div class="additional additional--left">
-          <p class="paragraph project__paragraph">
+        <div class="project__additional project__additional--left">
+          <p class="project__paragraph">
             The vast majority of Project Trellis applies to all ECP5 parts and may also apply to related Lattice parts
             such as the CrossLink FPGAs. IO and global network data is included for all ECP5 parts, and timing data is included
             for all speed grades.
         </div>
-        <div class="additional additional--right">
-          <p class="paragraph project__paragraph">
+        <div class="project__additional project__additional--right">
+          <p class="project__paragraph">
             The documentation is available in two formats:
           </p>
-          <p class="paragraph project__paragraph">
-            <a class="inline__link" href="https://symbiflow.github.io/prjtrellis-db/" target="_blank">Human-readable
+          <p class="project__paragraph">
+            <a class="inline-link" href="https://symbiflow.github.io/prjtrellis-db/" target="_blank">Human-readable
               HTML files</a><br>
-            <a class="inline__link" href="https://github.com/SymbiFlow/prjtrellis-db/" target="_blank">Machine-readable
+            <a class="inline-link" href="https://github.com/SymbiFlow/prjtrellis-db/" target="_blank">Machine-readable
               ASCII files</a>
           </p>
-          <p class="paragraph project__paragraph">
-            More documentation can be found published on the <a class="inline__link" href="http://prjtrellis.readthedocs.io/en/latest/"
+          <p class="project__paragraph">
+            More documentation can be found published on the <a class="inline-link" href="http://prjtrellis.readthedocs.io/en/latest/"
               target="_blank">prjtrellis ReadTheDocs site</a>.
           </p>
         </div>
@@ -389,52 +374,51 @@
         <h3 class="header header__project">
           Project IceStorm
         </h3>
-        <p class="paragraph project__paragraph">
-          <a class="inline__link" href="http://www.clifford.at/icestorm/" target="_blank">Project IceStorm</a> is a
+        <p class="project__paragraph">
+          <a class="inline-link" href="http://www.clifford.at/icestorm/" target="_blank">Project IceStorm</a> is a
           previous project that documented the iCE40 bit-stream format. It will become a part of SymbiFlow. SymbiFlow
           will support the old Yosys-ArachnePnr-IceStorm flow but will also add a Yosys-VPR-IceStorm flow.
         </p>
       </div>
-    </div>
   </section>
 
   <section class="row row__downloads" id="downloads">
-    <h2 class="header header__downloads row__header">
+    <h2 class="header row__header downloads__header">
       Links
     </h2>
-    <p class="paragraph paragraph__downloads">
+    <p class="downloads__paragraph">
       SymbiFlow is a collaborative project and we welcome your contributions. The code is available on GitHub, and HTML
       documentation is available on Read The Docs.
     </p>
     <div class="downloads__links">
       <a class="download__anchor" href="https://github.com/SymbiFlow" target="_blank">
-        <div class="download__link download__code">
+        <div class="btn">
           Visit our GitHub
         </div>
       </a>
       <a class="download__anchor" href="https://symbiflow.readthedocs.io/en/latest/" target="_blank">
-        <div class="download__link download__docs">
+        <div class="btn">
           Read the docs
         </div>
       </a>
     </div>
   </section>
 
-  <section class="row row__help" id="talks">
-    <h2 class="header row__header header__help">
+  <section class="row row__talks" id="talks">
+    <h2 class="header row__header talks__header">
       Talks
     </h2>
     <ul class="talks__list">
-      <li><a href="https://orconf.org/#symbiflow">SymbiFlow talk at ORCONF 2018</a></li>
-      <li><a href="https://orconf.org/#symbioticeda">nextpnr talk at ORCONF 2018</a></li>
-      <li><a href="https://orconf.org/#trellis">Project Trellis talk at ORCONF 2018</a></li>
+      <li><a class="inline-link" href="https://orconf.org/#symbiflow">SymbiFlow talk at ORCONF 2018</a></li>
+      <li><a class="inline-link" href="https://orconf.org/#symbioticeda">nextpnr talk at ORCONF 2018</a></li>
+      <li><a class="inline-link" href="https://orconf.org/#trellis">Project Trellis talk at ORCONF 2018</a></li>
     </ul>
   </section>
   <section class="row row__help" id="help">
-    <h2 class="header row__header header__help">
+    <h2 class="header row__header help__header">
       Help wanted!
     </h2>
-    <p class="paragraph paragraph__help">
+    <p class="paragraph__help">
       Are you interested in helping this project move forward? There are multiple areas and technologies we need help
       with - reach out to us, we’re sure we will find something for you.
     </p>
@@ -450,12 +434,12 @@
     </ul>
     <div class="downloads__links">
       <a class="download__anchor" href="http://webchat.freenode.net/">
-        <div class="download__link">
+        <div class="btn btn--inverted">
           IRC
         </div>
       </a>
       <a class="download__anchor" href="https://lists.librecores.org/listinfo">
-        <div class="download__link">
+        <div class="btn btn--inverted">
           Mailing list
         </div>
       </a>
@@ -463,7 +447,7 @@
   </section>
 
   <section class="row row__boards" id="boards">
-    <h2 class="header header__boards row__header">
+    <h2 class="header row__header boards__header">
       Supported boards
     </h2>
 
@@ -552,8 +536,12 @@
         &copy; 2018 SymbiFlow
       </span>
       <span class="footer__social">
-        <a href="https://github.com/SymbiFlow/" target="_blank"><img src="assets/img/github.svg" alt="GitHub"></a>&nbsp;&nbsp;&nbsp;
-        <a href="#" target="_blank"><img src="assets/img/twitter.svg" alt="Twitter"></a>
+        <a href="https://github.com/SymbiFlow/" target="_blank">
+          <img class="social__icon" src="assets/img/github.svg" alt="GitHub">
+        </a>
+        <a href="#" target="_blank">
+          <img class="social__icon" src="assets/img/twitter.svg" alt="Twitter">
+        </a>
       </span>
     </div>
   </footer>
