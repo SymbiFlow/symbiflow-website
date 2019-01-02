@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>SymbiFlow - the GCC of FPGAs</title>
   <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css">
 </head>
 
 <body>
@@ -409,9 +410,9 @@
       Talks
     </h2>
     <ul class="talks__list">
-      <li><a class="inline-link" href="https://orconf.org/#symbiflow">SymbiFlow talk at ORCONF 2018</a></li>
-      <li><a class="inline-link" href="https://orconf.org/#symbioticeda">nextpnr talk at ORCONF 2018</a></li>
-      <li><a class="inline-link" href="https://orconf.org/#trellis">Project Trellis talk at ORCONF 2018</a></li>
+      {{#each talks}}
+        <li><a class="inline-link" href="{{url}}">{{{title}}}</a></li>
+      {{/each}}
     </ul>
   </section>
   <section class="row row__help" id="help">
@@ -455,58 +456,15 @@
 
       <div class="glide__track boards" data-glide-el="track">
         <ul class="glide__slides">
-          <a class="board__anchor" href="https://store.digilentinc.com/arty-a7-artix-7-fpga-development-board-for-makers-and-hobbyists/"
-            target="_blank">
-            <li class="glide__slide board">
-              <img class="board__img" src="assets/img/arty.png" alt="Board">
-              <span class="board__name">Digilent Arty A7&#8209;35T</span>
-              <span class="board__fpga">XC7A35T</span>
-            </li>
-          </a>
-          <a href="https://store.digilentinc.com/basys-3-artix-7-fpga-trainer-board-recommended-for-introductory-users/"
-            target="_blank" class="board__anchor">
-            <li class="glide__slide board">
-              <img class="board__img" src="assets/img/basys.png" alt="Board">
-              <span class="board__name">Digilent Basys 3 Artix&#8209;7</span>
-              <span class="board__fpga">XC7A35T</span>
-            </li>
-          </a>
-          <a href="https://store.digilentinc.com/zybo-z7-zynq-7000-arm-fpga-soc-development-board/" target="_blank"
-            class="board__anchor">
-            <li class="glide__slide board">
-              <img class="board__img" src="assets/img/zybo.png" alt="Board">
-              <span class="board__name">Digilent Zybo Z7</span>
-              <span class="board__fpga">XC7Z010</span>
-            </li>
-          </a>
-          <a href="https://www.crowdsupply.com/alphamax/netv2" target="_blank" class="board__anchor">
-            <li class="glide__slide board">
-              <img class="board__img" src="assets/img/netv2.png" alt="Board">
-              <span class="board__name">Alphamax NeTV2</span>
-              <span class="board__fpga">XC7A35T</span>
-            </li>
-          </a>
-          <a href="https://www.latticesemi.com/en/Products/DevelopmentBoardsAndKits/ECP55GVersaDevKit" target="_blank" class="board__anchor">
-            <li class="glide__slide board">
-              <img class="board__img" src="assets/img/versa5g.png" alt="Board">
-              <span class="board__name">ECP5-5G Versa</span>
-              <span class="board__fpga">LFE5UM5G-45F</span>
-            </li>
-          </a>
-          <a href="http://radiona.org/new-fpga-board-ulx3s/" target="_blank" class="board__anchor">
-            <li class="glide__slide board">
-              <img class="board__img" src="assets/img/ulx3s.jpg" alt="Board">
-              <span class="board__name">ULX3S</span>
-              <span class="board__fpga">LFE5U-12F/-25F/-45F/-85F</span>
-            </li>
-          </a>
-          <a href="https://www.crowdsupply.com/tinyfpga/tinyfpga-ex" target="_blank" class="board__anchor">
-            <li class="glide__slide board">
-              <img class="board__img" src="assets/img/tinyfpga_ex.jpg" alt="Board">
-              <span class="board__name">TinyFPGA Ex</span>
-              <span class="board__fpga">LFE5U-85F/LFE5UM5G-85F</span>
-            </li>
-          </a>
+          {{#each boards}}
+            <a class="board__anchor" href="{{url}}" target="_blank">
+              <li class="glide__slide board">
+                <img class="board__img" src="assets/img/{{image}}" alt="{{{name}}}">
+                <span class="board__name">{{{name}}}</span>
+                <span class="board__fpga">{{{FPGA}}}</span>
+              </li>
+            </a>
+          {{/each}}
         </ul>
       </div>
 
@@ -545,6 +503,7 @@
 
   <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tiny-slider@2.9.1/dist/tiny-slider.min.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
 
