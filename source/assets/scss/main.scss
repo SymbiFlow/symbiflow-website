@@ -27,6 +27,7 @@ body {
   font-family: $font-primary;
   font-size: 20px;
   overflow-x: hidden;
+
   @media screen and (max-width: 500px) {
     font-size: 18px;
   }
@@ -36,7 +37,12 @@ body {
   box-sizing: inherit;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $font-secondary;
   color: $header-secondary;
   text-align: center;
@@ -68,10 +74,12 @@ a {
   text-decoration: none;
   color: inherit;
   transition: .3s;
+
   &.inline-link {
     color: $header-primary;
     font-style: italic;
   }
+
   &:hover {
     opacity: .5;
   }
@@ -101,6 +109,7 @@ a {
   transition: .3s;
   overflow: hidden;
   position: relative;
+
   &::before {
     display: block;
     content: '';
@@ -114,23 +123,29 @@ a {
     transition: .3s;
     z-index: -1;
   }
+
   &:hover {
     opacity: 1;
     color: $bg-secondary;
+
     &::before {
-      transform:  translate(-4%, -28%) rotate(20deg);
+      transform: translate(-4%, -28%) rotate(20deg);
     }
   }
+
   &--inverted {
     color: $bg-secondary;
     border-color: $bg-secondary;
+
     &::before {
       background: $bg-secondary;
     }
+
     &:hover {
       color: $text-tertiary;
     }
   }
+
   @media screen and (max-width: 500px) {
     width: 200px;
   }
@@ -173,6 +188,7 @@ a {
   list-style: none;
   padding: 0;
   font-size: em(18px);
+
   @media screen and (max-width: 990px) {
     flex-direction: column;
     position: fixed;
@@ -184,6 +200,7 @@ a {
     padding: 55px 80px;
     margin: 0;
     transition: .3s;
+
     &.nav__links--open {
       right: 0;
     }
@@ -194,6 +211,7 @@ a {
   display: none;
   z-index: 9000;
   transition: .3s;
+
   .hamburger {
     outline: none;
     transition: .3s;
@@ -201,23 +219,34 @@ a {
     align-items: center;
     opacity: 1 !important;
   }
+
   .hamburger-inner {
-    &, &::before, &::after {
+
+    &,
+    &::before,
+    &::after {
       background-color: $header-primary;
     }
   }
+
   @media screen and (max-width: 990px) {
     display: flex;
     align-items: center;
+
     &.nav__toggle--open {
       transform: translateX(-200px);
+
       @media screen and (max-width: 500px) {
         transform: translateX(-180px)
       }
     }
+
     .is-active {
       .hamburger-inner {
-        &, &::before, &::after {
+
+        &,
+        &::before,
+        &::after {
           background-color: $bg-primary;
         }
       }
@@ -231,13 +260,16 @@ a {
   font-weight: bold;
   display: flex;
   align-items: center;
+
   &:not(:first-of-type) {
     margin-left: 45px;
+
     @media screen and (max-width: 990px) {
       margin-left: 0;
       margin-top: 40px;
     }
   }
+
   @media screen and (max-width: 990px) {
     text-align: right;
     color: $text-tertiary;
@@ -249,8 +281,9 @@ a {
 // HERO
 // ***********************
 
-.row__hero {
+.hero {
   padding: 280px 0 114px;
+
   @media screen and (max-width: 500px) {
     padding-top: 200px;
   }
@@ -270,6 +303,7 @@ a {
   line-height: 30px;
   margin: 40px auto 0;
   width: 100%;
+
   &:nth-of-type(2) {
     margin-top: 20px;
   }
@@ -288,10 +322,12 @@ a {
   font-weight: bold;
   font-family: $font-secondary;
   transition: .3s;
+
   &:hover {
     box-shadow: 0 15px 85px transparentize($btn-color, .6);
     transform: translateY(-5px);
   }
+
   &:active {
     transition: .1s;
     box-shadow: 0 5px 75px transparentize($btn-color, .6);
@@ -303,9 +339,10 @@ a {
 // ABOUT
 // ***********************
 
-.row__about {
+.about {
   padding: 200px 0;
   @include tilted-bg;
+
   @media screen and (max-width: 500px) {
     &::after {
       top: 50%;
@@ -319,13 +356,14 @@ a {
   color: $text-tertiary;
 }
 
-.about {
+.about__content {
   position: relative;
   column-count: 2;
   column-gap: 40px;
   margin: 62px auto 0;
   z-index: 10;
   color: $text-tertiary;
+
   @media screen and (max-width: 750px) {
     column-count: 1;
   }
@@ -340,8 +378,9 @@ a {
 // DIAGRAMS
 // ***********************
 
-.row__diagrams {
+.diagrams {
   padding: 60px 0 190px;
+
   a {
     font-weight: bold;
     color: $header-primary;
@@ -352,28 +391,38 @@ a {
   margin-bottom: 80px;
 }
 
-.diagram {
+.diagrams__diagram {
   margin: 0 auto 160px;
+
   @media screen and (max-width: 500px) {
     margin-bottom: 80px;
   }
+
   &:last-of-type {
     margin-bottom: 0;
   }
+
   &:first-of-type {
     margin-top: 160px;
+
     @media screen and (max-width: 500px) {
       margin-top: 80px;
     }
   }
 }
 
+.diagrams__paragraph {
+  @extend .projects__paragraph
+}
+
 .diagram__diagram {
   margin: 0 auto;
   overflow-x: auto;
   color: $header-secondary;
+
   img:not(.icon) {
     width: 100%;
+
     @media screen and (max-width: 500px) {
       width: 500px;
       margin-bottom: 20px;
@@ -381,7 +430,7 @@ a {
   }
 }
 
-.table__container {
+.diagram__container {
   border: 3px solid $header-secondary;
   border-radius: 8px;
   overflow: auto;
@@ -392,37 +441,46 @@ a {
   table-layout: fixed;
   font-size: em(30px);
   border-collapse: collapse;
+
   tr:last-of-type td {
     border-bottom: 0;
   }
+
   thead td {
     border-top: 0;
     padding: 30px 45px;
     text-align: center;
     font-weight: bold;
   }
+
   td {
     width: 245px;
     border: 3px solid $header-secondary;
     padding: 20px;
+
     &:last-child {
       border-right: 0;
     }
+
     &:first-child {
       border-left: 0;
       font-weight: bold;
     }
   }
+
   ul {
     font-weight: normal;
     list-style-type: none;
     padding-left: 0;
     margin: 10px 0;
+
     li {
       font-size: em(26px, 30px);
+
       &:not(:last-of-type) {
         margin-bottom: 8px;
       }
+
       &::before {
         display: inline;
         content: '- ';
@@ -434,9 +492,11 @@ a {
 .icon {
   display: block;
   margin: 10px auto 23px;
+
   &--large {
     height: 30px;
   }
+
   &--small {
     height: 20px;
   }
@@ -446,12 +506,26 @@ a {
 // SUBPROJECTS
 // ***********************
 
+.subprojects {
+  padding: 150px 0 160px;
+  @include tilted-bg(320px);
+
+  @media screen and (max-width: 800px) {
+
+    &::before,
+    &::after {
+      top: 44%;
+    }
+  }
+}
+
 .subprojects__tiles {
   position: relative;
   z-index: 1;
   display: flex;
   justify-content: space-between;
   margin-top: 70px;
+
   @media screen and (max-width: 800px) {
     flex-direction: column;
   }
@@ -460,23 +534,27 @@ a {
 .subproject__tile {
   width: calc(100% / 3 - 15px);
   border-radius: 10px;
-  box-shadow: 0 2px 20px 0 rgba(0,0,0,0.21);
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.21);
   background-color: $bg-primary;
   padding: 70px 43px;
   text-align: center;
   transition: .3s;
+
   @media screen and (max-width: 800px) {
     width: 100%;
     display: flex;
     text-align: left;
+
     &:not(:last-of-type) {
       margin-bottom: 30px;
     }
   }
+
   @media screen and (max-width: 500px) {
     flex-wrap: wrap;
     text-align: center;
   }
+
   &:hover {
     transform: translateY(-10px)
   }
@@ -484,6 +562,7 @@ a {
 
 .subproject__icon {
   height: 160px;
+
   @media screen and (max-width: 800px) {
     width: 100%;
     margin-right: 20px;
@@ -499,9 +578,11 @@ a {
 .subproject__header {
   margin-top: 0;
   margin-bottom: 60px;
+
   @media screen and (max-width: 800px) {
     text-align: left;
   }
+
   @media screen and (max-width: 500px) {
     text-align: center;
   }
@@ -509,6 +590,7 @@ a {
 
 .subproject__description {
   line-height: 30px;
+
   @media screen and (max-width: 800px) {
     margin-bottom: 0;
   }
@@ -520,57 +602,57 @@ a {
   margin-top: 20px;
 }
 
-.row__subprojects {
-  padding: 150px 0 160px;
-  @include tilted-bg(320px);
-  @media screen and (max-width: 800px) {
-    &::before,
-    &::after {
-      top: 44%;
-    }
-  }
-}
-
 .subprojects__header {
   position: relative;
   color: $text-tertiary;
   margin: 0 auto 52px;
 }
 
-.row__projects {
+// ***********************
+// PROJECTS
+// ***********************
+
+.projects {
   padding-bottom: 80px;
 }
 
-.project {
+.projects__project {
   clear: both;
+
   &::after {
     content: "";
     display: table;
     clear: both;
   }
+
   &:not(:first-of-type) {
     margin-top: 98px;
   }
 }
 
-.project__paragraph {
+.projects__paragraph {
   margin: 0 auto 40px;
   line-height: 30px;
 }
 
-.project__additional {
+.projects__additional {
   width: calc(50% - 17px);
+
   @media screen and (max-width: 600px) {
     width: 100%;
   }
+
   &--left {
     float: left;
+
     @media screen and (max-width: 600px) {
       float: none;
     }
   }
+
   &--right {
     float: right;
+
     @media screen and (max-width: 600px) {
       float: none;
     }
@@ -581,16 +663,19 @@ a {
 // DOWNLOADS
 // ***********************
 
-.row__downloads {
+.downloads {
   padding: 180px 0;
   @include tilted-bg(120px);
+
   &::before {
     transform: translate(-50%, -50%) rotate(-4deg);
   }
+
   &::after {
     height: calc((100% - 120px) / 2);
     transform: translate(-50%, -100%) rotate(5deg);
   }
+
   @media screen and (max-width: 500px) {
     &::after {
       top: 50%;
@@ -622,6 +707,7 @@ a {
   width: calc(100% - 80px);
   margin: 0 auto;
   padding: 0;
+
   @media screen and (max-width: 500px) {
     flex-wrap: wrap;
     max-width: 200px;
@@ -629,10 +715,11 @@ a {
   }
 }
 
-.download__anchor {
+.downloads__anchor {
   &:hover {
     opacity: 1;
   }
+
   @media screen and (max-width: 500px) {
     &:not(:first-of-type) {
       margin-top: 40px;
@@ -644,13 +731,13 @@ a {
 // TALKS & HELP
 // ***********************
 
-.row__help,
-.row__talks {
+.help,
+.talks {
   padding: 90px 0 0;
   max-width: 800px;
 }
 
-.row__help {
+.help {
   padding-bottom: 100px;
 }
 
@@ -671,6 +758,8 @@ a {
   max-width: 500px;
   margin: 0 auto;
 }
+
+// TALKS CAROUSEL
 
 .tns-ovh {
   height: 175px !important;
@@ -695,6 +784,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
   button {
     width: 29px;
     height: 29px;
@@ -704,12 +794,15 @@ a {
     border: 0;
     outline: 0;
     transition: .3s;
+
     &:first-child {
       background: url('../img/chevron-circle-up-solid.svg') 29px;
     }
+
     &:last-child {
       background: url('../img/chevron-circle-down-solid.svg') 29px;
     }
+
     &:hover {
       opacity: .7;
     }
@@ -723,9 +816,11 @@ a {
   margin: 0 auto 20px;
   color: $header-primary;
   transition: .3s;
+
   &--down {
     margin: 20px auto 0;
   }
+
   &:hover {
     color: transparentize($header-primary, .3);
   }
@@ -736,16 +831,17 @@ a {
   li {
     margin-bottom: 8px;
   }
+
   @media screen and (max-width: 500px) {
     padding-left: 25px;
-  }  
+  }
 }
 
 // ***********************
 // BOARDS
 // ***********************
 
-.row__boards {
+.boards {
   padding: 90px 0 130px;
 }
 
@@ -754,28 +850,31 @@ a {
   margin: 60px auto 0;
 }
 
-.boards {
+.boards__boards {
   margin: 0 auto;
   overflow-x: hidden;
 }
+
+// BOARDS CAROUSEL
 
 .glide__slides {
   padding-top: 10px;
 }
 
-.board__anchor {
+.boards__anchor {
   transition: .3s;
+
   &:hover {
     opacity: 1;
     transform: translateY(-10px);
   }
 }
 
-.board {
+.boards__board {
   text-align: center;
 }
 
-.board__img {
+.boards__img {
   width: 100%;
   height: 25vw;
   max-height: 330px;
@@ -785,19 +884,20 @@ a {
   margin-bottom: 40px;
   padding: 30px;
   image-rendering: pixelated;
+
   @media screen and (max-width: 800px) {
     margin-bottom: 20px;
   }
 }
 
-.board__name {
+.boards__name {
   font-style: italic;
   font-weight: bold;
   color: $header-secondary;
   display: block;
 }
 
-.board__fpga {
+.boards__fpga {
   display: block;
 }
 
@@ -816,18 +916,23 @@ a {
   justify-content: center;
   color: $header-primary;
   outline: 0;
+
   svg {
     width: 30px;
+
     * {
       transition: .2s;
     }
   }
+
   &:hover {
     color: transparentize($header-primary, .3);
   }
+
   &--left {
     left: -35px;
   }
+
   &--right {
     right: -35px;
   }
@@ -863,4 +968,62 @@ a {
   width: 30px;
   height: 30px;
   margin-left: 30px;
+}
+
+// ***********************
+// ARTICLE
+// ***********************
+
+.article {
+  max-width: 1040px;
+  margin: 20px auto 100px;
+  padding: 0 40px;
+
+  p {
+    font-size: 1rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: initial;
+    margin-top: 40px;
+    text-align: left;
+    color: $header-secondary;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-top: 80px;
+  }
+
+  h2 {
+    color: $header-tertiary;
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    color: $header-primary;
+    font-size: 1.2rem;
+    margin-top: 30px;
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-size: initial;
+  }
+
+  a {
+    color: $header-primary;
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    background-color: $text-primary;
+  }
 }
