@@ -19,8 +19,8 @@ before_script:
   - ./.travis-deploy-clone.sh
 
 script:
+  - ./.travis-check.sh
   - gulp build
 
 after_success:
   - ./.travis-deploy-push.sh
-
