@@ -49,3 +49,9 @@ new Glide('.glide', {
     }
   }
 }).mount()
+
+let slider = tns({
+  container: '.talks__list',
+  items: 3,
+  axis: 'vertical'
+})

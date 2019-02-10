@@ -1,0 +1,60 @@
+{
+  "boards": [
+    {
+      "name": "Digilent Arty A7&#8209;35T",
+      "FPGA": "XC7A35T",
+      "image": "arty.png",
+      "url": "https://store.digilentinc.com/arty-a7-artix-7-fpga-development-board-for-makers-and-hobbyists/"
+    },
+    {
+      "name": "Digilent Basys 3 Artix&#8209;7",
+      "FPGA": "XC7A35T",
+      "image": "basys.png",
+      "url": "https://store.digilentinc.com/basys-3-artix-7-fpga-trainer-board-recommended-for-introductory-users/"
+    },
+    {
+      "name": "Digilent Zybo Z7",
+      "FPGA": "XC7Z010",
+      "image": "zybo.png",
+      "url": "https://store.digilentinc.com/zybo-z7-zynq-7000-arm-fpga-soc-development-board/"
+    },
+    {
+      "name": "Alphamax NeTV2",
+      "FPGA": "XC7A35T",
+      "image": "netv2.png",
+      "url": "https://www.crowdsupply.com/alphamax/netv2"
+    },
+    {
+      "name": "ECP5-5G Versa",
+      "FPGA": "LFE5UM5G-45F",
+      "image": "versa5g.png",
+      "url": "https://www.latticesemi.com/en/Products/DevelopmentBoardsAndKits/ECP55GVersaDevKit"
+    },
+    {
+      "name": "ULX3S",
+      "FPGA": "LFE5U-12F/-25F/-45F/-85F",
+      "image": "ulx3s.jpg",
+      "url": "http://radiona.org/new-fpga-board-ulx3s/"
+    },
+    {
+      "name": "TinyFPGA Ex",
+      "FPGA": "LFE5U-85F/LFE5UM5G-85F",
+      "image": "tinyfpga_ex.jpg",
+      "url": "https://www.crowdsupply.com/tinyfpga/tinyfpga-ex"
+    }
+  ],
+  "talks": [
+    {
+      "title": "SymbiFlow talk at ORCONF 2018",
+      "url": "https://orconf.org/#symbiflow"
+    },
+    {
+      "title": "nextpnr talk at ORCONF 2018",
+      "url": "https://orconf.org/#symbioticeda"
+    },
+    {
+      "title": "Project Trellis talk at ORCONF 2018",
+      "url": "https://orconf.org/#trellis"
+    }
+  ]
+}
