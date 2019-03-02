@@ -270,7 +270,7 @@ questions too!
 As developer time is limited, we ask everyone post their messages to the public
 mailing list or IRC channel (read
 http://www.catb.org/esr/faqs/smart-questions.html#noprivate for a more detailed
-explaination).
+explanation).
 
 # Thanks
 
