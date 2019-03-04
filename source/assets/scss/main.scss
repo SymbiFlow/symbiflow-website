@@ -146,8 +146,45 @@ a {
     }
   }
 
+  @media screen and (max-width: 600px) {
+    width: 210px;
+  }
+}
+
+// ***********************
+// GSOC BANNER
+// ***********************
+
+.gsoc-banner {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 80px;
+  background-color: $bg-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+}
+
+.gsoc-banner__caption {
+  margin-right: 20px;
+
+  @media screen and (max-width: 800px) {
+    margin-right: 0;
+  }
+}
+
+.gsoc-banner__logo {
+  max-height: 40px;
+  vertical-align: middle;
+
   @media screen and (max-width: 500px) {
-    width: 200px;
+    max-height: 30px;
   }
 }
 
@@ -160,9 +197,9 @@ a {
   height: 104px;
   margin: 0 auto;
   position: fixed;
-  top: 0;
+  top: 60px;
   background-color: $bg-primary;
-  z-index: 9999;
+  z-index: 9998;
   display: flex;
   align-items: flex-end;
 }
@@ -264,6 +301,10 @@ a {
   &:not(:first-of-type) {
     margin-left: 45px;
 
+    @media screen and (max-width: 1100px) {
+      margin-left: 30px;
+    }
+
     @media screen and (max-width: 990px) {
       margin-left: 0;
       margin-top: 40px;
@@ -274,6 +315,10 @@ a {
     text-align: right;
     color: $text-tertiary;
     z-index: 9999;
+
+    &:first-of-type {
+      margin-top: 60px;
+    }
   }
 }
 
@@ -708,7 +753,7 @@ a {
   margin: 0 auto;
   padding: 0;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 600px) {
     flex-wrap: wrap;
     max-width: 200px;
     justify-content: center;
@@ -720,7 +765,7 @@ a {
     opacity: 1;
   }
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 600px) {
     &:not(:first-of-type) {
       margin-top: 40px;
     }
@@ -834,6 +879,24 @@ a {
 
   @media screen and (max-width: 500px) {
     padding-left: 25px;
+  }
+}
+
+.help__links {
+  max-width: 700px;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+    align-items: center;
+
+    .btn {
+      width: 210px;
+    }
+
+    .downloads__anchor:not(:first-child) {
+      margin-top: 40px;
+    }
   }
 }
 
