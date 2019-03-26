@@ -12,7 +12,8 @@ let scroll = new SmoothScroll('a[href*="#"]', {
 
 const hamburgerBtn = document.querySelector('.nav__toggle'),
   hamburger = document.querySelector('.nav__toggle .hamburger'),
-  nav = document.querySelector('.nav__links')
+  nav = document.querySelector('.nav__links'),
+  footerCopy = document.querySelector('.footer__copy span')
 
 let navOpen = false
 
@@ -31,6 +32,8 @@ hamburgerBtn.onclick = evt => {
 nav.onclick = evt => {
   if (evt.target.tagName === 'A') navToggle()
 }
+
+footerCopy.innerHTML = ` - ${new Date().getFullYear()}`
 
 new Glide('.glide', {
   type: 'carousel',
