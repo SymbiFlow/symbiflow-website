@@ -105,7 +105,7 @@ feedback and you to update your proposal.
 ### **Tip 5** - Make your application public
 
 Having a public application means not only can mentors give you feedback but
-other students and the general community can too!
+other people and the general community can too!
 
 Using a wiki is a good idea because it lets us look at the history of how your
 proposal has evolved. It also means you can have formatting making it easier to
@@ -154,7 +154,6 @@ their application was or was not accepted.
 The following are conditions that result in automatic rejection:
 
  * Group project proposed. Google has specified that groups MAY NOT participate. Individuals only.
- * Proposer is not a student. Google has specified this as a requirement of the GSoC program.
 
 # How to ask for help
 
