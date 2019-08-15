@@ -46,15 +46,15 @@
   "talks": [
     {
       "title": "SymbiFlow talk at ORCONF 2018",
-      "url": "https://orconf.org/#symbiflow"
+      "url": "https://orconf.org/2018/#symbiflow"
     },
     {
       "title": "nextpnr talk at ORCONF 2018",
-      "url": "https://orconf.org/#symbioticeda"
+      "url": "https://orconf.org/2018/#symbioticeda"
     },
     {
       "title": "Project Trellis talk at ORCONF 2018",
-      "url": "https://orconf.org/#trellis"
+      "url": "https://orconf.org/2018/#trellis"
     }
   ]
 }
