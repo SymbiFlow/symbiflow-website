@@ -1,7 +1,7 @@
 # Step 0 - Prior Reading
 
 Firstly, **please read the Google Summer of Code
-[Student Manual](http://en.flossmanuals.net/GSoCStudentGuide/)**. It contains a
+[Student Manual](https://google.github.io/gsocguides/student/)**. It contains a
 lot of helpful information about the program and about participating as a
 student in Google Summer of Code.
 
