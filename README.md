@@ -1,6 +1,6 @@
 # SymbiFlow Website
 
-[Website for the SymbiFlow](https://symbiflow.github.io).
+[Website for the SymbiFlow project](https://symbiflow.github.io).
 
 # License
 
@@ -13,7 +13,7 @@ Requires `node.js`. Run `npm install` to install dependencies.
 
 # Development
 
-Build using `gulp`. Run `gulp watch` to start live server.
+Build using `gulp`. Run `gulp watch` to start a live server.
 
 # Build
 
