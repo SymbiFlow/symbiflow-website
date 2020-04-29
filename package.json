@@ -25,5 +25,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "handlebars-helpers": "^0.10.0"
+  }
 }

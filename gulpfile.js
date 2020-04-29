@@ -11,6 +11,8 @@ const gulp = require('gulp'),
   inject = require('gulp-inject-string'),
   browsersync = require('browser-sync').create()
 
+const helpers = require('handlebars-helpers')();
+
 function browserSync(done) {
   browsersync.init({
     server: {
@@ -27,16 +29,15 @@ function md() {
     .pipe(inject.prepend(`
       <!DOCTYPE html>
       <html lang="en">
-      
+
       <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>SymbiFlow - the GCC of FPGAs</title>
         <link rel="stylesheet" href="assets/css/main.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css">
       </head>
-      
+
       <body class="article">
     `))
     .pipe(inject.append(`
@@ -82,15 +83,21 @@ function imagesMove() {
     .pipe(browsersync.stream())
 }
 
-function css() {
+function scss() {
   return gulp
-    .src('./source/assets/scss/main.scss')
+    .src('./source/assets/scss/*.scss')
     .pipe(sass({
       outputStyle: 'compressed'
     }))
     .pipe(prefix())
     .pipe(gulp.dest('./build/assets/css/'))
     .pipe(browsersync.stream())
+}
+
+function css() {
+  return gulp
+    .src('./source/assets/css/*.css')
+    .pipe(gulp.dest('./build/assets/css/'))
 }
 
 function scripts() {
@@ -107,7 +114,7 @@ function scripts() {
 function handlebars() {
   delete require.cache[require.resolve('./source/assets/data/data.json')]
   return gulp
-    .src('./source/index.hbs')
+    .src('./source/*.hbs')
     .pipe(hb('html', {
       context: require('./source/assets/data/data.json')
     }))
@@ -118,9 +125,10 @@ function handlebars() {
 
 function watchFiles() {
   gulp.watch('./source/assets/fonts/**/*', fonts)
-  gulp.watch('./source/assets/scss/**/*', css)
+  gulp.watch('./source/assets/scss/**/*', scss)
+  gulp.watch('./source/assets/css/**/*', css)
   gulp.watch('./source/assets/js/**/*', scripts)
-  gulp.watch(['./source/index.hbs', './source/assets/data/data.json'], handlebars)
+  gulp.watch(['./source/*.hbs', './source/assets/data/data.json'], handlebars)
   gulp.watch('./source/assets/img/**/*', images)
   gulp.watch('./source/md/**/*.md', md)
 }
@@ -131,12 +139,12 @@ function fonts() {
     .pipe(gulp.dest('./build/assets/fonts'))
 }
 
-const build = gulp.parallel(css, scripts, images, fonts, handlebars, md, () => {
+const build = gulp.parallel(scss, css, scripts, images, fonts, handlebars, md, () => {
   return gulp
     .src('./source/**/*.html')
     .pipe(gulp.dest('./build'))
 }),
-  watch = gulp.series(gulp.parallel(css, scripts, imagesMove, fonts, handlebars), gulp.parallel(watchFiles, browserSync))
+  watch = gulp.series(gulp.parallel(scss, css, scripts, imagesMove, fonts, handlebars), gulp.parallel(watchFiles, browserSync))
 
 exports.build = build
 exports.watch = watch
