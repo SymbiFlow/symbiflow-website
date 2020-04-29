@@ -439,7 +439,7 @@ a {
   }
 
   @media screen and (max-width: 600px) {
-    grid-template-columns: repeat(1 100%);
+    grid-template-columns: 100%;
   }
 }
 
@@ -464,7 +464,7 @@ a {
 // ***********************
 
 .diagrams {
-  padding: 60px 0 190px;
+  padding: 80px 0 120px;
 
   a {
     font-weight: bold;
@@ -477,7 +477,7 @@ a {
 }
 
 .diagrams__diagram {
-  margin: 0 auto 160px;
+  margin: 0 auto 140px;
 
   @media screen and (max-width: 500px) {
     margin-bottom: 80px;
@@ -556,6 +556,10 @@ a {
   border-radius: 8px;
   overflow: auto;
   margin: 0 auto;
+}
+
+.diagram__link {
+  color: $header-secondary !important;
 }
 
 .diagram__table {
@@ -804,7 +808,7 @@ a {
 // ***********************
 
 .news {
-  padding: 90px 0 80px;
+  padding: 90px 0 120px;
 }
 
 .news__container {
