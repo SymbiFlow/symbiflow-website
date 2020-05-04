@@ -32,8 +32,13 @@ become available [here](https://developers.google.com/season-of-docs/docs/partic
 on May 11. Once (or even before) you have selected the project, contact us
 to talk about it - this can really help your application.
 
-Suggested project ideas are listed on our ideas list, and they should have the appropriate
-[season-of-docs tag](https://github.com/SymbiFlow/ideas/labels/season-of-docs).
+Suggested project ideas:
+
+ * [Series of user stories documents](https://github.com/SymbiFlow/ideas/issues/55)
+ * [Documentation audit](https://github.com/SymbiFlow/ideas/issues/56)
+ * [Contributing guide](https://github.com/SymbiFlow/ideas/issues/53)
+ * [Open FPGA for absolute beginners](https://github.com/SymbiFlow/ideas/issues/52)
+ * [SymbiFlow ecosystem map](https://github.com/SymbiFlow/ideas/issues/54)
 
 ## Step 2 - Writing your application
 
