@@ -13,6 +13,12 @@
       "url": "https://store.digilentinc.com/basys-3-artix-7-fpga-trainer-board-recommended-for-introductory-users/"
     },
     {
+      "name": "QuickFeather Development Kit",
+      "FPGA": "EOS-S3",
+      "image": "quickfeather.png",
+      "url": "https://www.quicklogic.com/products/eos-s3/quickfeather-development-kit/"
+    },
+    {
       "name": "Digilent Zybo Z7",
       "FPGA": "XC7Z010",
       "image": "zybo.png",
@@ -33,7 +39,7 @@
     {
       "name": "ULX3S",
       "FPGA": "LFE5U-12F/-25F/-45F/-85F",
-      "image": "ulx3s.jpg",
+      "image": "ulx3s.png",
       "url": "http://radiona.org/new-fpga-board-ulx3s/"
     },
     {
@@ -41,20 +47,74 @@
       "FPGA": "LFE5U-85F/LFE5UM5G-85F",
       "image": "tinyfpga_ex.jpg",
       "url": "https://www.crowdsupply.com/tinyfpga/tinyfpga-ex"
+    },
+    {
+      "name": "iCE40-HX8K Breakout Board",
+      "FPGA": "ICE40HX8K-B-EVN",
+      "image": "breakout.png",
+      "url": "https://www.latticesemi.com/Products/DevelopmentBoardsAndKits/iCE40HX8KBreakoutBoard.aspx"
+    },
+    {
+      "name": "iCEblink40LP1K Evaluation Kit",
+      "FPGA": "ICE40LP1K-BLINK-EVN",
+      "image": "iceblink.png",
+      "url": "http://www.latticesemi.com/iCEblink40-LP1K"
+    },
+    {
+      "name": "iCEstick Evaluation Kit",
+      "FPGA": "ICE40HX1K-STICK-EVN",
+      "image": "icestick.png",
+      "url": "https://www.latticesemi.com/icestick"
+    },
+    {
+      "name": "Digilent Nexys Video Artix-7 FPGA",
+      "FPGA": "XC7A200T-1SBG484C",
+      "image": "nexys-video.png",
+      "url": "https://store.digilentinc.com/nexys-video-artix-7-fpga-trainer-board-for-multimedia-applications/"
+    },
+    {
+      "name": "DPControl iCEVision Board",
+      "FPGA": "iCE40UP5K",
+      "image": "icevision.png",
+      "url": "https://www.latticesemi.com/en/Products/DevelopmentBoardsAndKits/DPControliCEVision"
     }
   ],
   "talks": [
     {
-      "title": "SymbiFlow talk at ORCONF 2018",
-      "url": "https://orconf.org/2018/#symbiflow"
+      "title": "Xilinx Series 7 fully open source toolchain!",
+      "details": "Tim Ansell | Hackday 2019",
+      "image": "symbiflow_hackaday2019.png",
+      "url": "https://youtu.be/EHePto95qoE"
     },
     {
-      "title": "nextpnr talk at ORCONF 2018",
-      "url": "https://orconf.org/2018/#symbioticeda"
+      "title": "VPR device models from Verilog with V2X",
+      "details": "Karol Gugala | ORConf 2019",
+      "image": "v2x_orconf2019.png",
+      "url": "https://youtu.be/a31vH_tZLBM"
     },
     {
-      "title": "Project Trellis talk at ORCONF 2018",
-      "url": "https://orconf.org/2018/#trellis"
+      "title": "Xilinx Artix 7 support in SymbiFlow",
+      "details": "Tim Ansell | ORConf 2019",
+      "image": "symbiflow_orconf2019.png",
+      "url": "https://youtu.be/V7jdYMOC9VM"
+    },
+    {
+      "title": "Improving VPR I/O",
+      "details": "Fahrican Koşar | ORConf 2019",
+      "image": "vpr_orconf2019.png",
+      "url": "https://youtu.be/6chMfGZy3NQ"
+    },
+    {
+      "title": "An update on SymbiFlow",
+      "details": "Tim Ansell | ORConf 2018",
+      "image": "symbiflow_orconf2018.png",
+      "url": "https://youtu.be/CI1lpbt2Hz8"
+    },
+    {
+      "title": "The nextpnr FOSS FPGA place-and-route tool",
+      "details": "Clifford Wolf | ORConf 2018",
+      "image": "nextpnr_orconf2018.png",
+      "url": "https://youtu.be/XbwrOff59ck"
     }
   ]
 }

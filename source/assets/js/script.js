@@ -1,4 +1,3 @@
-
 let scroll = new SmoothScroll('a[href*="#"]', {
   speed: 300,
   offset: (anchor, toggle) => {
@@ -34,27 +33,3 @@ nav.onclick = evt => {
 }
 
 footerCopy.innerHTML = ` - ${new Date().getFullYear()}`
-
-new Glide('.glide', {
-  type: 'carousel',
-  perView: 3,
-  gap: 30,
-  peek: {
-    before: 20,
-    after: 20
-  },
-  breakpoints: {
-    800: {
-      perView: 2
-    },
-    550: {
-      perView: 1
-    }
-  }
-}).mount()
-
-let slider = tns({
-  container: '.talks__list',
-  items: 3,
-  axis: 'vertical'
-})
