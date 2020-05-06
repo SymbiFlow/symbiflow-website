@@ -9,7 +9,7 @@
 // ***********************
 
 .tools {
-  margin: 320px auto 0;
+  margin: 80px auto 200px;
   padding: 120px 0 60px;
   @include tilted-bg(320px);
 
@@ -62,6 +62,7 @@
 }
 
 .help {
+  margin-top: 160px;
   padding: 90px 0 100px 0;
 }
 
