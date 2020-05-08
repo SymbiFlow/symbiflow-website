@@ -2,22 +2,22 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>SymbiFlow - the GCC of FPGAs</title>
 
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <!-- Glide.js -->
-  <link rel="stylesheet" href="assets/css/glide.core.min.css">
-  <link rel="stylesheet" href="assets/css/glide.theme.min.css">
+  <link rel="stylesheet" href="assets/css/glide.core.min.css" />
+  <link rel="stylesheet" href="assets/css/glide.theme.min.css" />
   <!-- glightbox -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
   <!-- Github Feed -->
-  <link rel="stylesheet" href="assets/css/github-activity.css">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+  <link rel="stylesheet" href="assets/css/github-activity.css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css" />
 
-  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
 <body>
@@ -25,14 +25,14 @@
   <div class="gsoc-banner">
     <span class="gsoc-banner__caption">SymbiFlow is participating in </span>
     <a href="https://summerofcode.withgoogle.com/organizations/6224851964002304/">
-      <img class="gsoc-banner__logo" src="assets/img/gsoc-logo.svg" alt="Google's Summer of Code website">
+      <img class="gsoc-banner__logo" src="assets/img/gsoc-logo.svg" alt="Google's Summer of Code website" />
     </a>
   </div>
 
   <nav class="nav">
     <div class="nav__wrapper">
       <a href="index.html">
-        <img class="nav__logo" src="assets/img/symbiflow.svg" alt="SymbiFlow">
+        <img class="nav__logo" src="assets/img/symbiflow.svg" alt="SymbiFlow" />
       </a>
 
       <div class="nav__toggle">
@@ -52,7 +52,7 @@
 
   <section class="row hero" id="hero">
     <h1 class="hero__header">
-      Innovate by reaching for the open source FPGA tooling
+      Innovate by reaching for the <br /> open source FPGA tooling
     </h1>
     <h4 class="hero__subheader">
       SymbiFlow is a fully open source toolchain for the development of FPGAs
@@ -60,67 +60,17 @@
       Lattice iCE40 and Lattice ECP5 FPGAs, and is gradually being expanded
       to provide a comprehensive end-to-end FPGA synthesis flow.
     </h4>
-    <a href="#downloads">
-      <div class="hero__btn">
-        Get Started
-      </div>
-    </a>
-  </section>
-
-  <section class="row about" id="about">
-    <h2 class="row__header about__header">
-      Why SymbiFlow?
-    </h2>
-    <div class="about__content">
-      <p class="about__paragraph">
-        SymbiFlow aims to push FPGAs towards more widespread adoption by
-        optimising and automating FPGA development workflows with a set of
-        pluggable open source tools.
-      </p>
-
-      <div class="about_paragraph">
-        <p>
-          Its goal is to become a complete FOSS toolchain that is:
-        </p>
-        <ul class="about__aims">
-          <li>Fully Open Source</li>
-          <li>Multi Platform</li>
-          <li>Pluggable / Interchangeable</li>
-        </ul>
-      </div>
-    </div>
-    <div class="about__icon_container">
-
-      <div class="about__icon">
-        <img src="assets/img/icons_os_free.svg" alt="">
-        <h4> Free &amp; Open Source </h4>
-      </div>
-
-      <div class="about__icon">
-        <img src="assets/img/icons_multi_platform.svg" alt="">
-        <h4> Multi-platform </h4>
-      </div>
-
-      <div class="about__icon">
-        <img src="assets/img/icons_vendor_neutral.svg" alt="">
-        <h4> Vendor-neutral </h4>
-      </div>
-
-      <div class="about__icon">
-        <img src="assets/img/icons_interchangeable_tools.svg" alt="">
-        <h4> Interchangeable <br /> tool suite </h4>
-      </div>
-
-      <div class="about__icon">
-        <img src="assets/img/icons_community.svg" alt="">
-        <h4> Growing <br /> community </h4>
-      </div>
-
-      <div class="about__icon">
-        <img src="assets/img/icons_learn.svg" alt="">
-        <h4> Look inside <br /> and improve </h4>
-      </div>
-
+    <div class="hero__btns">
+      <a href="getting-started.html">
+        <div class="hero__btn">
+          Getting Started
+        </div>
+      </a>
+      <a href="developers.html">
+        <div class="hero__btn">
+          Help contribute
+        </div>
+      </a>
     </div>
   </section>
 
@@ -136,8 +86,8 @@
             <li class="glide__slide talks__talk">
               <div class="talks__img_container">
                 <a href="{{url}}" class="glightbox2">
-                  <img class="talks__img" src="assets/img/talks/{{image}}">
-                  <img class="talks__playbtn" src="assets/img/play_btn.svg">
+                  <img class="talks__img" src="assets/img/talks/{{image}}" />
+                  <img class="talks__playbtn" src="assets/img/play_btn.svg" />
                 </a>
               </div>
               <h4>{{title}}</h4>
@@ -182,6 +132,274 @@
       </div>
     </div>
  </section>
+
+  <section class="row about" id="about">
+    <h2 class="row__header about__header">
+      Why SymbiFlow?
+    </h2>
+    <div class="about__content">
+      <p class="about__paragraph">
+        SymbiFlow aims to push FPGAs towards more widespread adoption by
+        optimising and automating FPGA development workflows with a set of
+        pluggable open source tools.
+      </p>
+
+      <div class="about_paragraph">
+        <p>
+          Its goal is to become a complete FOSS toolchain that is:
+        </p>
+        <ul class="about__aims">
+          <li>Fully Open Source</li>
+          <li>Multi Platform</li>
+          <li>Pluggable / Interchangeable</li>
+        </ul>
+      </div>
+    </div>
+    <div class="about__icon_container">
+
+      <div class="about__icon">
+        <img src="assets/img/icons_os_free.svg" alt="" />
+        <h4> Free &amp; Open Source </h4>
+      </div>
+
+      <div class="about__icon">
+        <img src="assets/img/icons_multi_platform.svg" alt="" />
+        <h4> Multi-platform </h4>
+      </div>
+
+      <div class="about__icon">
+        <img src="assets/img/icons_vendor_neutral.svg" alt="" />
+        <h4> Vendor-neutral </h4>
+      </div>
+
+      <div class="about__icon">
+        <img src="assets/img/icons_interchangeable_tools.svg" alt="" />
+        <h4> Interchangeable <br /> tool suite </h4>
+      </div>
+
+      <div class="about__icon">
+        <img src="assets/img/icons_community.svg" alt="" />
+        <h4> Growing <br /> community </h4>
+      </div>
+
+      <div class="about__icon">
+        <img src="assets/img/icons_learn.svg" alt="" />
+        <h4> Look inside <br /> and improve </h4>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="row diagrams">
+    <h2 class="row__header diagrams__header">
+      How it works
+    </h2>
+    <p class="diagrams__paragraph_intro">
+      To understand how SymbiFlow works, it is best to start with an overview of <br />
+      the general EDA tooling ecosystem and then proceed to see what <br />
+      the SymbiFlow project consists of.
+    </p>
+    <div class="diagrams__diagram" id="eda-ecosystem">
+      <h3 class="diagram__header">
+        EDA Tooling Ecosystem
+      </h3>
+      <div class="diagrams__content">
+        <div class="diagrams__paragraph">
+          <p>
+            For both ASIC- and FPGA-oriented EDA tooling,
+            there are three major areas:
+          </p>
+          <ul>
+            <li> hardware description </li>
+            <li> frontend </li>
+            <li> backend </li>
+          </ul>
+        </div>
+        <p class="diagrams__paragraph">
+          While there are a number of open hardware description languages,
+          such as Verilog, VHDL, Migen and Chisel, the frontend and backend
+          tooling has been lacking established standard, vendor-neutral solutions.
+          SymbiFlow focuses on filling this gap.
+        </p>
+      </div>
+      <div class="diagram__diagram">
+        <img src="assets/img/EDA.svg" alt="" />
+      </div>
+    </div>
+    <div class="diagrams__diagram" id="structure">
+      <h3 class="diagram__header">
+        SymbiFlow project structure
+      </h3>
+      <div class="diagrams__content">
+      <p class="diagrams__paragraph">
+        To become a complete FOSS FPGA toolchain, SymbiFlow needs a number of
+        tools and projects to be in place to provide an end-to-end flow.
+        Thus, SymbiFlow serves as an umbrella framework for several activities,
+        the central of which focuses on the creation of FPGA
+        SymbiFlow Architecture Definitions, i.e. documentation of how specific
+        FPGAs work internally.
+      </p>
+      <p class="diagrams__paragraph">
+        Those definitions and serve as input to backend tools like nextpnr and
+        Verilog to Routing, and frontend tools like Yosys. They are created
+        within separate collaborating projects targeting different FPGAs -
+        <a href="https://github.com/SymbiFlow/prjxray">Project X-Ray</a> for Xilinx 7-Series,
+        <a href="https://github.com/SymbiFlow/icestorm">Project IceStorm</a> for Lattice iCE40 and
+        <a href="https://github.com/SymbiFlow/prjtrellis">Project Trellis</a> for Lattice ECP5 FPGAs.
+      </p>
+      </div>
+      <div class="diagram__diagram">
+        <img src="assets/img/parts.svg" />
+      </div>
+    </div>
+    <h3 class="diagram__header">
+      Current status
+    </h3>
+    <div class="diagram__diagram">
+      <div class="diagram__status">
+        <div class="diagram__container">
+          <table class="diagram__table">
+            <thead>
+              <tr>
+                <td></td>
+                <td>
+                  <a class="diagram__link" href="https://github.com/SymbiFlow/icestorm">
+                    Project Icestorm
+                  </a>
+                </td>
+                <td>
+                  <a class="diagram__link" href="https://github.com/SymbiFlow/prjtrellis">
+                    Project Trellis
+                  </a>
+                </td>
+                <td>
+                   <a class="diagram__link" href="https://github.com/SymbiFlow/prjxray">
+                    Project X-Ray
+                  </a>
+                </td>
+                <td>
+                  <a class="diagram__link" href="https://www.quicklogic.com/products/eos-s3/">
+                    QuickLogic Database
+                  </a>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Basic&nbsp;Tiles:
+                  <ul>
+                    <li>Logic</li>
+                    <li>Block&nbsp;RAM</li>
+                  </ul>
+                </td>
+       <!-- icestorm -->
+                <td>
+                  <img class="icon icon--large" src="assets/img/tick.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="" />
+                </td>
+       <!-- trellis -->
+                <td>
+                  <img class="icon icon--large" src="assets/img/tick.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="" />
+                </td>
+      <!-- x-ray -->
+                <td>
+                  <img class="icon icon--large" src="assets/img/tick.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/partial.svg" alt="" />
+                </td>
+      <!-- quicklogic -->
+                <td>
+                  <img class="icon icon--large" src="assets/img/tick.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Advanced&nbsp;Tiles:
+                  <ul>
+                    <li>DSP</li>
+                    <li>Hard&nbsp;Blocks</li>
+                    <li>Clock&nbsp;Tiles</li>
+                    <li>IO&nbsp;Tiles</li>
+                  </ul>
+                </td>
+      <!-- icestorm -->
+                <td>
+                  <img class="icon icon--large" src="assets/img/tick.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="" />
+                </td>
+      <!-- trellis -->
+                <td>
+                  <img class="icon icon--large" src="assets/img/tick.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="" />
+                </td>
+     <!-- x-ray -->
+                <td>
+                  <img class="icon icon--large" src="assets/img/partial.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/cross.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/cross.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="" />
+                </td>
+      <!-- quicklogic -->
+                <td>
+                  <img class="icon icon--large" src="assets/img/partial.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/cross.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Routing:
+                  <ul>
+                    <li>Logic</li>
+                    <li>Clock</li>
+                  </ul>
+                </td>
+                <td>
+      <!-- icestorm -->
+                  <img class="icon icon--large" src="assets/img/tick.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="" />
+                </td>
+      <!-- trellis -->
+                <td>
+                  <img class="icon icon--large" src="assets/img/tick.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="" />
+                </td>
+      <!-- x-ray -->
+                <td>
+                  <img class="icon icon--large" src="assets/img/tick.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="" />
+                </td>
+      <!-- quicklogic -->
+                <td>
+                  <img class="icon icon--large" src="assets/img/partial.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/tick.svg" alt="" />
+                  <img class="icon icon--small" src="assets/img/cross.svg" alt="" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="row subprojects" id="subprojects">
     <h2 class="row__header subprojects__header">
@@ -231,7 +449,8 @@
             FPGA + CPU <br /> sensor processing platform
           </p>
           <a class="subproject__more inline-link" target="_blank"
-             href="https://www.quicklogic.com/products/eos-s3/">learn more</a>
+             href="https://www.quicklogic.com/products/eos-s3/">learn more
+          </a>
         </div>
       </div>
 
@@ -245,247 +464,6 @@
 
       <div class="subproject__tile invisible">
       </div>
-
-    </div>
-  </section>
-
-  <section class="row diagrams">
-    <h2 class="row__header diagrams__header">
-      How it works
-    </h2>
-    <p class="diagrams__paragraph_intro">
-      To understand how SymbiFlow works, it is best to start with an overview of <br />
-      the general EDA tooling ecosystem and then proceed to see what <br />
-      the SymbiFlow project consists of.
-    </p>
-    <div class="diagrams__diagram" id="eda-ecosystem">
-      <h3 class="diagram__header">
-        EDA Tooling Ecosystem
-      </h3>
-      <div class="diagrams__content">
-        <div class="diagrams__paragraph">
-          <p>
-            For both ASIC- and FPGA-oriented EDA tooling,
-            there are three major areas:
-          </p>
-          <ul>
-            <li> hardware description </li>
-            <li> frontend </li>
-            <li> backend </li>
-          </ul>
-        </div>
-        <p class="diagrams__paragraph">
-          While there are a number of open hardware description languages,
-          such as Verilog, VHDL, Migen and Chisel, the frontend and backend
-          tooling has been lacking established standard, vendor-neutral solutions.
-          SymbiFlow focuses on filling this gap.
-        </p>
-      </div>
-      <div class="diagram__diagram">
-        <img src="assets/img/EDA.svg" alt="">
-      </div>
-    </div>
-    <div class="diagrams__diagram" id="structure">
-      <h3 class="diagram__header">
-        SymbiFlow project structure
-      </h3>
-      <div class="diagrams__content">
-      <p class="diagrams__paragraph">
-        To become a complete FOSS FPGA toolchain, SymbiFlow needs a number of
-        tools and projects to be in place to provide an end-to-end flow.
-        Thus, SymbiFlow serves as an umbrella framework for several activities,
-        the central of which focuses on the creation of FPGA
-        SymbiFlow Architecture Definitions, i.e. documentation of how specific
-        FPGAs work internally.
-      </p>
-      <p class="diagrams__paragraph">
-        Those definitions and serve as input to backend tools like nextpnr and
-        Verilog to Routing, and frontend tools like Yosys. They are created
-        within separate collaborating projects targeting different FPGAs -
-        <a href="https://github.com/SymbiFlow/prjxray">Project X-Ray</a> for Xilinx 7-Series,
-        <a href="https://github.com/SymbiFlow/icestorm">Project IceStorm</a> for Lattice iCE40 and
-        <a href="https://github.com/SymbiFlow/prjtrellis">Project Trellis</a> for Lattice ECP5 FPGAs.
-      </p>
-      </div>
-      <div class="diagram__diagram">
-        <img src="assets/img/parts.svg">
-      </div>
-    </div>
-      <h3 class="diagram__header">
-        Current status
-      </h3>
-      <div class="diagram__diagram">
-        <div class="diagram__status">
-          <div class="diagram__container">
-            <table class="diagram__table">
-              <thead>
-                <tr>
-                  <td></td>
-                  <td>
-                    <a class="diagram__link" href="https://github.com/SymbiFlow/icestorm">
-                      Project Icestorm
-                    </a>
-                  </td>
-                  <td>
-                    <a class="diagram__link" href="https://github.com/SymbiFlow/prjtrellis">
-                      Project Trellis
-                    </a>
-                  </td>
-                  <td>
-                    <a class="diagram__link" href="https://github.com/SymbiFlow/prjxray">
-                      Project X-Ray
-                    </a>
-                  </td>
-                  <td>
-                    <a class="diagram__link" href="https://www.quicklogic.com/products/eos-s3/">
-                      QuickLogic Database
-                    </a>
-                  </td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    Basic&nbsp;Tiles:
-                    <ul>
-                      <li>&nbsp;Logic</li>
-                      <li>&nbsp;Block&nbsp;RAM</li>
-                    </ul>
-                  </td>
-        <!-- icestorm -->
-                  <td>
-                    <img class="icon icon--large" src="assets/img/tick.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                  </td>
-        <!-- trellis -->
-                  <td>
-                    <img class="icon icon--large" src="assets/img/tick.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                  </td>
-        <!-- x-ray -->
-                  <td>
-                    <img class="icon icon--large" src="assets/img/tick.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/partial.svg" alt="">
-                  </td>
-        <!-- 2064 -->
-                  <td>
-                    <img class="icon icon--large" src="assets/img/tick.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Advanced&nbsp;Tiles:
-                    <ul>
-                      <li>&nbsp;DSP</li>
-                      <li>&nbsp;Hard&nbsp;Blocks</li>
-                      <li>&nbsp;Clock&nbsp;Tiles</li>
-                      <li>&nbsp;IO&nbsp;Tiles</li>
-                    </ul>
-                  </td>
-        <!-- icestorm -->
-                  <td>
-                    <img class="icon icon--large" src="assets/img/tick.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                  </td>
-        <!-- trellis -->
-                  <td>
-                    <img class="icon icon--large" src="assets/img/tick.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                  </td>
-      <!-- x-ray -->
-                  <td>
-                    <img class="icon icon--large" src="assets/img/partial.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/cross.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/cross.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                  </td>
-      <!-- 2064 -->
-                  <td>
-                    <img class="icon icon--large" src="assets/img/partial.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/cross.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Routing:
-                    <ul>
-                      <li>&nbsp;Logic</li>
-                      <li>&nbsp;Clock</li>
-                    </ul>
-                  </td>
-                  <td>
-        <!-- icestorm -->
-                    <img class="icon icon--large" src="assets/img/tick.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                  </td>
-        <!-- trellis -->
-                  <td>
-                    <img class="icon icon--large" src="assets/img/tick.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                  </td>
-        <!-- x-ray -->
-                  <td>
-                    <img class="icon icon--large" src="assets/img/tick.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                  </td>
-        <!-- 2064 -->
-                  <td>
-                    <img class="icon icon--large" src="assets/img/partial.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/tick.svg" alt="">
-                    <img class="icon icon--small" src="assets/img/cross.svg" alt="">
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="row downloads" id="downloads">
-    <h2 class="row__header downloads__header">
-      Links
-    </h2>
-    <p class="downloads__paragraph">
-      SymbiFlow is a collaborative project and we welcome your contributions.
-      The code is available on GitHub, while the HTML documentation
-      is available on Read The Docs.
-    </p>
-    <div class="downloads__links">
-      <a class="downloads__anchor" href="https://github.com/SymbiFlow" target="_blank">
-        <div class="btn">
-          Visit our GitHub
-        </div>
-      </a>
-      <a class="downloads__anchor" href="https://symbiflow.readthedocs.io/en/latest/" target="_blank">
-        <div class="btn">
-          Read the docs
-        </div>
-      </a>
-      <a class="downloads__anchor" href="getting-started.html">
-        <div class="btn">
-          Getting Started
-        </div>
-      </a>
 
     </div>
   </section>
@@ -507,16 +485,45 @@
         {{/gt}}
 
             <li class="boards__board">
-                <img class="boards__img" src="assets/img/boards/{{image}}" alt="{{{name}}}">
+                <img class="boards__img" src="assets/img/boards/{{image}}" alt="{{{name}}}" />
                 <span class="boards__name">{{{name}}}</span>
                 <span class="boards__fpga">{{{FPGA}}}</span>
             </li>
         </a>
         {{/each}}
     </div>
-
-    </div>
   </section>
+
+  <div class="downloads__wrapper">
+    <section class="row downloads" id="downloads">
+      <h2 class="row__header downloads__header">
+        Links
+      </h2>
+      <p class="downloads__paragraph">
+        SymbiFlow is a collaborative project and we welcome your contributions.
+        The code is available on GitHub, while the HTML documentation
+        is available on Read The Docs.
+      </p>
+      <div class="downloads__links">
+        <a class="downloads__anchor" href="https://github.com/SymbiFlow" target="_blank">
+          <div class="btn">
+            Visit our GitHub
+          </div>
+        </a>
+        <a class="downloads__anchor" href="https://symbiflow.readthedocs.io/en/latest/" target="_blank">
+          <div class="btn">
+            Read the docs
+          </div>
+        </a>
+        <a class="downloads__anchor" href="getting-started.html">
+          <div class="btn">
+            Getting Started
+          </div>
+        </a>
+      </div>
+    </section>
+    <div class="downloads__bg"></div>
+  </div>
 
   <footer class="footer">
     <div class="footer__wrapper">
@@ -525,7 +532,7 @@
       </span>
       <span class="footer__social">
         <a href="https://github.com/SymbiFlow/" target="_blank">
-          <img class="social__icon" src="assets/img/github.svg" alt="GitHub">
+          <img class="social__icon" src="assets/img/github.svg" alt="GitHub" />
         </a>
       </span>
     </div>
