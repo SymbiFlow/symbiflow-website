@@ -1244,3 +1244,38 @@ a {
     background-color: $text-primary;
   }
 }
+
+// ***********************
+// COMMUNITY
+// ***********************
+
+.comm {
+  padding: 80px 0 120px 0;
+}
+
+.comm__header {
+  margin-bottom: 60px;
+}
+
+.comm__register {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.comm__links {
+  max-width: 700px;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+    align-items: center;
+
+    .btn {
+      width: 210px;
+    }
+
+    .downloads__anchor:not(:first-child) {
+      margin-top: 40px;
+    }
+  }
+}
