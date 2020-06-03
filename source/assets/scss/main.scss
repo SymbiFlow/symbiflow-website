@@ -202,7 +202,8 @@ a {
   height: 104px;
   margin: 0 auto;
   position: fixed;
-  top: 60px;
+  //top: 60px; with GSoC banner
+  top: 0px;
   background-color: $bg-primary;
   z-index: 9998;
   display: flex;
