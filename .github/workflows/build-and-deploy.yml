@@ -49,4 +49,4 @@ jobs:
           .github/scripts/deploy-clone.sh
           cp -a /tmp/website-build/* build
           cd build
-          .github/scripts/deploy-push.sh
+          ../.github/scripts/deploy-push.sh
