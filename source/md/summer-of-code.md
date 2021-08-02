@@ -18,7 +18,7 @@ it can be tricky to work out which projects match your skills. We have a number
 of useful tools to help match you to projects.
 
 As selecting a project or understanding an idea can be hard, we recommend you
-come join us [on IRC](https://webchat.freenode.net/?channels=symbiflow) and
+come join us [on IRC](https://kiwiirc.com/nextclient/#irc://irc.libera.chat/#symbiflow) and
 talk to us further about them. Good students are engaged with the community
 before GSoC even starts!
 
@@ -231,7 +231,7 @@ Often the best way to ask questions is to start writing your Google Summer of Co
 # Where to Ask Questions
 
  * Join the [mailing lists](https://lists.librecores.org/) for the projects you are interested in.
- * Join the IRC chat channel [#symbiflow on irc.freenode.net](https://webchat.freenode.net/?channels=symbiflow).
+ * Join the IRC chat channel [#symbiflow on irc.libera.chat](https://kiwiirc.com/nextclient/#irc://irc.libera.chat/#symbiflow).
 
 ---
 

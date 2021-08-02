@@ -15,7 +15,7 @@ project can be found on our GSOD 2021
 [project proposal page](https://symbiflow.github.io/GSoD-2021-Application).
 
 Interested technical writers should reach out to us via
-[mail](mailto:contact@symbiflow.org)/[Slack](https://join.slack.com/t/symbiflow/shared_invite/enQtNTkyMjcyNTkzOTY4LTU0MzhmYWNjOGMyMTkyNjA0MmEyMWM5OWY3ZDg5MWQ3ODlmOWQwZjk2YzBmMDBjMzkzMzNjYjkwYjAxZTMyNjQ)/[IRC channel](https://webchat.freenode.net/?channels=symbiflow).
+[mail](mailto:contact@symbiflow.org)/[Slack](https://join.slack.com/t/symbiflow/shared_invite/enQtNTkyMjcyNTkzOTY4LTU0MzhmYWNjOGMyMTkyNjA0MmEyMWM5OWY3ZDg5MWQ3ODlmOWQwZjk2YzBmMDBjMzkzMzNjYjkwYjAxZTMyNjQ)/[IRC channel](https://kiwiirc.com/nextclient/#irc://irc.libera.chat/#symbiflow).
 You should also familiarize yourself with the guidelines for technical writers on Google's Season od Docs website:
 
 * **Google Season of Docs
