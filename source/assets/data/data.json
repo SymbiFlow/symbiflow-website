@@ -1,8 +1,8 @@
 {
   "boards": [
     {
-      "name": "Digilent Arty A7&#8209;35T",
-      "FPGA": "XC7A35T",
+      "name": "Digilent Arty A7",
+      "FPGA": "XC7A35T, XC7A100T",
       "image": "arty.png",
       "url": "https://store.digilentinc.com/arty-a7-artix-7-fpga-development-board-for-makers-and-hobbyists/"
     },
