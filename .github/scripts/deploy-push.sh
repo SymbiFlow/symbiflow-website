@@ -1,9 +1,12 @@
 #!/bin/bash
 
+set -e
+
 GITHUB_USER=$(echo $GITHUB_REPOSITORY | sed -e's-/.*--')
 GIT_DESCRIBE=$(git describe --tags)
 
 cd build
+
 touch .nojekyll
 cat > README.md <<EOF
 # [SymbiFlow Website](https://symbiflow.github.io)
