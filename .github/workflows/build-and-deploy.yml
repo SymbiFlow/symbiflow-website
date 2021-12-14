@@ -39,13 +39,14 @@ jobs:
           name: website-build
           path: /tmp/website-build
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Deploy website
         if: github.event_name == 'push'
         run: |
           git config --global user.name SymbiFlow
           git config --global user.mail robot@mith.ro
           git config --global push.default simple
-          git fetch origin --tags
           .github/scripts/deploy-clone.sh
           cp -a /tmp/website-build/* build
           ./.github/scripts/deploy-push.sh
